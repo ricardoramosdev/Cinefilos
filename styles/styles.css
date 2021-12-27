@@ -1,0 +1,41 @@
+:root{
+    --primary-color:#E50914;
+    --secondary-color:#221F1F;
+    --tertiary-color:#F5F5F1;
+    
+}
+nav{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+   ;
+}
+.marked{
+    position: relative;
+
+    z-index: -1;
+    background-image: url(https://phantom-marca.unidadeditorial.es/c5e81d8c1eed85f8aee0c243d2cf2d17/resize/660/f/webp/assets/multimedia/imagenes/2021/07/06/16255683165037.jpg);
+    border-radius: 0;
+    border: none;
+    color: var(--tertiary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+    height: 300px;
+}
+.marked img{
+    object-fit: cover;
+    object-position: center;
+    height: 300px;
+
+    
+}
+marked-title{
+    position: ;
+}
+
+a{
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
