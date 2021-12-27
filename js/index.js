@@ -1,5 +1,5 @@
 let movies=[
-    {codigo:01,nombrePelicula:"Avengers: Endgame", categoria:"Acción",descripcion:"Tras los sucesos de “Vengadores: Infinity War”, los superhéroes que sobrevivieron a Thanos se reunen para poner en práctica un plan definitivo que podría acabar con el villano definitivamente. No saben si funcionará, pero es su única oportunidad de intentarlo. Cuarta entrega de la saga “Vengadores”",publicado:true,imgPortada:"https://static.wikia.nocookie.net/marvelcinematicuniverse/images/9/9b/Avenger_Endgame_Poster_Oficial.png/revision/latest?cb=20190326185910&path-prefix=es"},
+    {codigo:01,nombrePelicula:"Avengers: Endgame", categoria:"Acción",descripcion:"Tras los sucesos de “Vengadores: Infinity War”, los superhéroes que sobrevivieron a Thanos se reunen para poner en práctica un plan definitivo que podría acabar con el villano definitivamente. No saben si funcionará, pero es su única oportunidad de intentarlo. Cuarta entrega de la saga “Vengadores”",publicado:true,imgPortada:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/qwLbQSeFy6ht8skBtao7lAZjsDo.jpg"},
     {codigo:02,nombrePelicula:"La Liga de la Justicia", categoria:"Acción",descripcion:"Decidido a garantizar que el último sacrificio de Superman no fuera en vano, Bruce Wayne alinea fuerzas con Diana Prince con planes de reclutar un equipo de metahumanos para proteger al mundo de una amenaza inminente de proporciones catastróficas",publicado:true,imgPortada:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/pI25ennflmJ1R9q7ZTI681f0WBb.jpg"},
     {codigo:03,nombrePelicula:"Godzilla vs Kong", categoria:"Acción",descripcion:"Godzilla y Kong, dos de las fuerzas más poderosas de un planeta habitado por todo tipo de aterradoras criaturas, se enfrentan en un espectacular combate que sacude los cimientos de la humanidad.",publicado:true,imgPortada:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/bnuC6hu7AB5dYW26A3o6NNLlIlE.jpg"},
     {codigo:04,nombrePelicula:"Spider-Man: Sin camino a casa", categoria:"Acción",descripcion:"Peter Parker está desenmascarado y ya no puede separar su vida normal de las altas apuestas de ser un superhéroe. Cuando le pide ayuda al Doctor Strange, lo que está en juego se vuelve aún más peligroso, lo que lo obliga a descubrir lo que realmente significa ser Spider-Man.",publicado:true,imgPortada:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/1z7ZQhga4AcSkQNqEU3Tf9XpxoX.jpg"},
@@ -16,3 +16,13 @@ let movies=[
     {codigo:15,nombrePelicula:"Con la magia en los zapatos", categoria:"Comedia",descripcion:"El filme, protagonizado por Adam Sandler (Niños grandes 2), cuenta la historia de un hombre que se gana la vida reparando zapatos que tiene una habilidad excepcional: es capaz de meterse metafísicamente en las vidas de aquellas personas a las que ha arreglado el calzado.",publicado:true,imgPortada:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/wLwquKAvtJ67KPJ2QskasIpS9uv.jpg"},
     {codigo:16,nombrePelicula:"Los Minions", categoria:"Comedia",descripcion:" Pasarán de la helada Antártida, a la ciudad de Nueva York en los años sesenta, para acabar en el Londres de la misma época, donde deberán enfrentarse al mayor reto hasta la fecha: salvar a la raza Minion de la aniquilación.",publicado:true,imgPortada:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/hVK35IfqYsk5jasR15aP5XBgKL1.jpg"},
 ]
+
+let featuredMovie =movies[0];
+let featuredMovieTitle = document.getElementById("featuredMovieTitle");
+featuredMovieTitle.innerHTML = featuredMovie.nombrePelicula;
+let featuredMovieImg = document.getElementById("featuredMovieImg");
+featuredMovieImg.src = featuredMovie.imgPortada;
+let featuredMovieDescription = document.getElementById("featuredMovieDescription");
+featuredMovieDescription.innerHTML = featuredMovie.descripcion;
+let featuredMovieBtn = document.getElementById("featuredMovieBtn");
+// featuredMovieBtn.innerHTML = 
