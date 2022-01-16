@@ -18,39 +18,71 @@ function register(evt) {
             return true
         } else {
             console.log("email disponible")
-            return false}
+            return false
+        }
 
-            
-            // users.find(us => {
-            //     if (us.email == userRegisterForm.elements["email"].value) {
-            //         document.getElementById("errorMessage").innerHTML = "Email en uso";
-            //         return;
-            //     }
+
+        // users.find(us => {
+        //     if (us.email == userRegisterForm.elements["email"].value) {
+        //         document.getElementById("errorMessage").innerHTML = "Email en uso";
+        //         return;
+        //     }
     })
     console.log(usuarioExistente)
-    if(!usuarioExistente){
+    if (!usuarioExistente) {
 
         users.push(userRegister);
-                localStorage.setItem("users", JSON.stringify(users))
-                console.log("usuario creado")
-                userCreated();
+        localStorage.setItem("users", JSON.stringify(users))
+        console.log("usuario creado")
+        userCreated();
     }
+}
+
+function userCreated() {
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Usuario creado correctamente',
+        showConfirmButton: false,
+        timer: 2000
+    })
 }
 
 // login
 // tomar los datos del formulario
-let userLogin = {
-    email: userLoginForm.elements["email"].value,
-    password: userLoginForm.elements["password"].value,
+function userLogin(evt) {
+    evt.preventDefault();
+    let userLogin = {
+        email: userLoginForm.elements["email"].value,
+        password: userLoginForm.elements["password"].value,
+    }
+
+    console.log(userLogin);
+    // recorrer el array de ususarios registrados 
+    users.map(user => {
+
+        // encontrar un usuario existente 
+        if (user.email == userLogin.email) {
+            console.log("usuario encontrado")
+            // ver si el password coincide 
+            // redirigir dependiendo del output anterior  
+            if (userLogin.password == user.password) {
+                let currentUser = user;
+
+                localStorage.setItem("currentUser", JSON.stringify(currentUser));
+                window.location.href = "/pages/admin.html";
+                console.log("puede ingresar");
+            } else {
+                document.getElementById("loginError").innerHTML = "Alguno de los datos no es correcto";
+            }
+        }
+    });
+
+
 }
-// recorrer el array de ususarios registrados 
-// encontrar un usuario existente 
-// ver si el password coincide 
-// redirigir dependiendo del output anterior  
-function userCreated(){Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: 'Usuario creado correctamente',
-    showConfirmButton: false,
-    timer: 2000
-  })}
+
+function userLogout(){
+    localStorage.removeItem("currentUser")
+   window.location.href="/index.html"
+    
+}

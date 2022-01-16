@@ -1,5 +1,4 @@
 let movies = JSON.parse(localStorage.getItem("movies")) || [];
-
 const movieList = document.querySelector("#productList")
 
 function productList() {
@@ -36,6 +35,7 @@ function deleteProduct(index) {
     movies = JSON.parse(localStorage.getItem("movies"));
     productList();
 };
+
 
 function feature(index) {
     console.log(movies[index])

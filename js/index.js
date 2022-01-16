@@ -129,9 +129,9 @@ let movies = [{
 ]
 
 localStorage.setItem("movies", JSON.stringify(movies));
-movies = JSON.parse(localStorage.getItem("movies"));
 
-let featuredMovie = JSON.parse(localStorage.getItem("featured"));
+
+let featuredMovie = JSON.parse(localStorage.getItem("featured"))||movies[0];
 let featuredMovieTitle = document.getElementById("featuredMovieTitle");
 featuredMovieTitle.innerHTML = featuredMovie.nombrePelicula;
 let featuredMovieImg = document.getElementById("featuredMovieImg");
