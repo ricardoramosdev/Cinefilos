@@ -1,0 +1,56 @@
+:root {
+    --primary-color: #E50914;
+    --secondary-color: #221F1F;
+    --tertiary-color: #F5F5F1;
+
+}
+
+
+nav {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    ;
+}
+
+.featured {
+    z-index: -1;
+    border: none;
+    color: var(--tertiary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.featured img {
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    border-radius: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+
+}
+#featuredMovieBtn{
+    width: 8rem;
+}
+
+
+.card-body {
+    text-shadow: black 2px 2px 2px;
+    background-color: rgba(00, 00, 00, 0.4);
+    height: 20rem;
+    
+}
+
+/* marked-title{
+    position: ;
+} */
+
+a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}

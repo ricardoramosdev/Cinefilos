@@ -8,210 +8,222 @@
     <title>Cinefilos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles.css">
-
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="https://kit.fontawesome.com/62ca135f44.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header></header>
-    <main>
+    <header class="position-sticky top-0">
+        <nav class="navbar navbar-expand-md navbar-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">CINEFILOS</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-none" id="isAdmin">
+                            <a class="nav-link" href="/pages/admin.html">Panel Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acerca de nosotros</a>
+                        </li>
+                        <li class="nav-item " id="login">
+                            <a class="nav-link" type="button" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Login</a>
+                        </li>
+                        <li class="nav-item  d-none" id="logout">
+                            <a class="nav-link" type="button" onclick="userLogout()">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-        <!-- primer carousel -->
-    
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+       
+    </header>
+    <main>
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                        <button type="button" class="close btn-danger" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/9/9b/Avenger_Endgame_Poster_Oficial.png/revision/latest?cb=20190326185910&path-prefix=es" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block" class="imagen" >
-                                <h5>Avengers: Endgame</h5>
-                                <p>Tras los sucesos de “Vengadores: Infinity War”, los superhéroes que sobrevivieron a Thanos se reunen para poner en práctica un plan definitivo que podría acabar con el villano definitivamente. No saben si funcionará, pero es su única oportunidad de intentarlo. Cuarta entrega de la saga “Vengadores</p>
+                    <div class="modal-body text-center" cz-shortcut-listen="true">
+
+                        <form class="form-signin" id="userLoginForm" onsubmit="userLogin(event)">
+                            <img class=""
+                                src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khvCFpB5PnRrNwXs1M3EMoAJtliQsg...Nq9vo9"
+                                alt="" width="100">
+                            <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+                            <label for="inputEmail" class="sr-only">Email</label>
+                            <input type="email" id="loginEmail" name="email" class="form-control" placeholder="Email"
+                                required autofocus="">
+                            <label for="inputPassword" class="sr-only">Contraseña</label>
+                            <input type="password" id="loginPassword" name="password" class="form-control"
+                                placeholder="Contraseña" required>
+                            <div id="loginError" class="text-danger"></div>
+                            <div class="my-2">
+
+                                <a href="#" class="text-danger text-decoration-underline">Olvidé mi contraseña</a>
                             </div>
+                            <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
+                            <p class="mt-2 mb-3 text-muted">© 2022</p>
+                        </form>
+                        <hr>
+                        <div class="mb-3">
+
+                            <a href="/pages/register.html" class="text-danger ">Registrar un usuario nuevo</a>
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/pI25ennflmJ1R9q7ZTI681f0WBb.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>La Liga de la Justicia</h5>
-                                <p>Decidido a garantizar que el último sacrificio de Superman no fuera en vano, Bruce Wayne alinea fuerzas con Diana Prince con planes de reclutar un equipo de metahumanos para proteger al mundo de una amenaza inminente de proporciones catastróficas</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
+
+
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
                 </div>
-            
-    
-            <!-- segundo carousel -->
-    
-            
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-    
-        
-    
-            <!-- tercer carousel -->
-    
-            
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-    
-    
-             <!-- cuarto carousel -->
-    
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-    
+            </div>
+        </div>
+        <!-- Fin Modal -->
+
+        <div class="card  featured ">
+            <img src="" class="card-img" id="featuredMovieImg" alt="imagen pelicula destacada">
+            <div class="card-body d-flex flex-column justify-content-end">
+                <h5 class="card-title" id="featuredMovieTitle">Pelicula destacada</h5>
+                <p class="card-text pt-3" id="featuredMovieDescription">With supporting text below as a natural lead-in
+                    to additional content.</p>
+                <a href="#" class="btn btn-danger" id="featuredMovieBtn">Ver más</a>
+            </div>
+        </div>
+
+        <div class="categorias">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore natus minima pariatur aliquam
+                laboriosam, earum quaerat deserunt ipsa cum vero saepe reprehenderit dolore. Nobis perspiciatis
+                cupiditate quas aperiam saepe in!
+                Magnam neque, adipisci, dicta tempore aliquid ea exercitationem ratione iusto velit, et necessitatibus
+                laborum atque dolore maiores nobis! Assumenda qui necessitatibus sit facilis beatae atque repudiandae
+                ad, aut laudantium cum?
+                Ad at dolores, cumque eos aperiam delectus quam, aliquid dolorem doloremque facere laboriosam reiciendis
+                debitis id sequi? Quas non in, odit velit nihil, pariatur porro aperiam beatae vero laboriosam quam.
+                Blanditiis officia saepe, suscipit ducimus repellendus harum molestias unde in repudiandae aperiam et
+                aspernatur velit iusto, natus, aliquam laudantium error quasi. Facilis voluptas ea quam laborum nobis
+                dignissimos nemo tempore.
+                Optio, aut corporis alias, quibusdam veniam cupiditate saepe in neque iste tempora quos doloremque earum
+                reiciendis sunt obcaecati aliquid tenetur officia eos! Inventore eveniet placeat et facere quos quisquam
+                magnam?
+                Adipisci unde obcaecati doloribus ea molestias sit id dicta totam voluptatem nobis, quam laboriosam
+                voluptas reprehenderit. Eius possimus nihil id! A accusamus et nihil alias, modi necessitatibus eos
+                earum eius?
+                Quaerat accusantium fugit dicta iusto quidem architecto maxime. Blanditiis molestias tenetur praesentium
+                deleniti voluptatem sequi distinctio consequuntur, iusto, animi id est consequatur assumenda ipsum
+                beatae at iure non quidem saepe.
+                Quaerat fugiat nam ea nobis? Amet molestiae officia velit iusto numquam distinctio laudantium fuga porro
+                facere odio, commodi nam accusantium repudiandae ipsa? Provident obcaecati atque odit animi laudantium
+                error iusto!
+                Quia perspiciatis saepe sit cum facere, corporis consequuntur dignissimos nisi adipisci eaque aliquam
+                possimus reprehenderit ratione distinctio deleniti obcaecati eos neque quo harum temporibus blanditiis?
+                Non suscipit sint asperiores nulla.
+                Inventore ea odio eos numquam fugiat labore, reiciendis minima similique ipsum molestias eum doloribus a
+                maxime nulla hic distinctio expedita earum voluptatibus perspiciatis sunt. Dolorum atque similique
+                labore reiciendis non!
+                Expedita unde commodi repudiandae labore, quisquam cupiditate mollitia, praesentium ipsa ab animi ipsam
+                aut nesciunt ea laboriosam rem officia? In sed eum quae id officia. Tempore veritatis asperiores ipsa
+                sequi!
+                Sequi minus labore, saepe a ratione placeat alias eius, quasi excepturi quod, modi obcaecati nihil.
+                Sequi ipsam quod eaque odio temporibus sunt voluptatem recusandae. Neque esse accusantium adipisci
+                incidunt vitae?
+                Maxime, quam reiciendis dolor voluptatibus modi deleniti illo beatae fugit vero quo nemo culpa, ipsam
+                animi aliquid? Voluptatem totam a possimus voluptate laboriosam accusamus vitae temporibus ipsum nulla
+                iusto. Dolores!
+                Cum excepturi fuga adipisci quia. Alias eum numquam officiis pariatur consequuntur minima veniam iusto
+                temporibus tempore ducimus esse facilis saepe voluptate quas dolorum unde expedita sed, rem molestiae,
+                repellat dicta!
+                Eos sint blanditiis nostrum quisquam dolorum, fugiat nulla laborum illum animi eveniet iusto eaque
+                deserunt ab ducimus obcaecati accusamus, quas voluptatem quo consequatur, vel tenetur odio voluptates.
+                Aut, accusamus harum!
+                Aspernatur repellat inventore accusamus illum modi fugit aperiam delectus temporibus? Rem nostrum quia
+                officia vitae numquam obcaecati, modi, quisquam cum ipsum eveniet ducimus officiis. Quis quos eveniet
+                deserunt aspernatur itaque?
+                Molestias veritatis laborum, consequatur odit hic expedita dolores ipsam iusto quo deserunt saepe error
+                doloremque nam rem perferendis laboriosam voluptatum sequi doloribus exercitationem vitae labore officia
+                sed consectetur? Repellat, inventore?
+                Deleniti dolore veniam dolorem consectetur, ut, inventore accusamus omnis iure, iste culpa cupiditate
+                sed quaerat tempora. Neque voluptatibus asperiores vitae tenetur, quis molestiae repellendus sapiente
+                incidunt, ipsam fugit, animi necessitatibus.
+                Repudiandae ullam similique dignissimos alias laboriosam eos aut deserunt, fugiat recusandae unde
+                doloribus facilis fuga quaerat aspernatur natus expedita quos magni! Tempora totam iste error hic! Quia
+                debitis excepturi quisquam.
+                Harum molestiae adipisci fugit quasi aliquam aliquid in earum omnis perspiciatis numquam sequi,
+                praesentium cumque perferendis odit nemo dolores magni qui reprehenderit sint ullam necessitatibus eos
+                exercitationem! Dolorum, eos mollitia.
+                Accusamus, harum nostrum facere animi recusandae repudiandae eligendi libero veritatis iusto maiores
+                incidunt perferendis quos voluptatibus aperiam impedit voluptate necessitatibus sapiente placeat? Totam
+                expedita fugit sequi quae debitis voluptatibus odit?
+                Dolorem consequatur maiores laboriosam rem. Fugiat aut, impedit dolore officiis a culpa voluptatibus
+                fugit aspernatur ratione sit saepe quidem iste animi iusto minus dolorum unde earum? Recusandae sed
+                expedita facere?
+                Tempore vero repellat adipisci natus necessitatibus nesciunt odit quia pariatur. Expedita, delectus.
+                Autem suscipit cupiditate temporibus eligendi necessitatibus, magni voluptatibus eius explicabo, ad,
+                ullam inventore porro repellendus dolore nihil non?
+                Molestias facere autem laborum, cumque beatae iure quas officia maxime aperiam vero sapiente soluta?
+                Assumenda quasi cum expedita perspiciatis itaque voluptatibus. Sapiente rem, natus quae minus
+                repellendus voluptates velit distinctio.
+                Architecto sed quo minima pariatur a quos. Aspernatur repellendus, magni, odit veritatis eligendi
+                laboriosam, culpa eaque sed quo reiciendis distinctio repudiandae consequatur. Voluptas perferendis
+                laborum numquam ex, quisquam quod eum.
+                Autem accusamus ipsum est, eaque nostrum deleniti officiis aut fuga cumque? Sequi veritatis eligendi vel
+                soluta vitae. At in nisi cum recusandae voluptatibus exercitationem tempore, velit voluptates,
+                reiciendis rerum quo.
+                Aperiam animi nisi aliquid a! Eaque sint numquam obcaecati porro sit quaerat at suscipit vel aperiam
+                aspernatur non, repellendus tempore totam adipisci! Accusamus veniam, molestiae quasi laborum quia
+                beatae minus.
+                Atque laudantium distinctio natus, saepe fugit labore iure nulla earum libero assumenda voluptatem
+                soluta harum illo maxime fuga. Distinctio praesentium in commodi sit quisquam est similique
+                reprehenderit obcaecati. Numquam, eaque.
+                Magni libero veniam nulla harum autem aperiam beatae debitis, repudiandae tempore distinctio explicabo
+                nihil nisi vero impedit molestiae ut magnam alias! Nihil nesciunt autem quasi quisquam ex ipsa sapiente
+                ad.
+                Quidem illum odio omnis, eius architecto reiciendis consequatur nostrum ipsum a soluta rem pariatur
+                nesciunt cum cumque ex mollitia hic, explicabo dolorem quisquam, eaque earum incidunt? Aliquam cum
+                doloribus sint.</p>
+        </div>
     </main>
-    <footer></footer>
+    <footer class="bg-dark text-light">
+        <div class="row g-0 align-items-center py-4">
+            <div id="sections " class="col"></div>
+            <div id="reserved " class="col">Todos los derechos reservados &copy;</div>
+            <div class=" col" id="redes">
+                <a href=""><i class="fab fa-facebook-square mx-2"></i></a>
+                <a href=""><i class="fa fa-instagram mx-2" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter mx-2" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
     <script src="/js/index.js"></script>
+    <script src="/js/signup.js"></script>
+    <script src="/js/loginValidation.js"></script>
+    <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+   
+
 </body>
 
 </html>
