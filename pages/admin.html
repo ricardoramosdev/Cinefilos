@@ -102,8 +102,67 @@
         <!-- Fin Modal -->
         <div id="admin-title">
             <h3>Administrar Productos</h3>
-            <button class="btn btn-primary">Nuevo +</button>
+            <button class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#newMovie" >Agregar Película +</button>
         </div>
+        
+        <div class="modal fade " id="newMovie" tabindex="-1" role="dialog" aria-labelledby="newMovie" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content ">
+                <div class="modal-header">
+                  <h5 class="modal-title">Nueva Película</h5>
+                  <button type="button" class="close btn-danger" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form id="newMovie" >
+                            <div class="row">
+                                <div class="mb-3 col">
+                                  <label class="form-label" for="name">Nombre</label>
+                                  <input type="text" class="form-control" id="name" placeholder="Nombre de Pelicula">
+                                </div>
+                                <div class="mb-3 col">
+                                    <label class="form-label" for="category">Categoría</label>
+                                    <select class="form-control" id="category">
+                                      <option>Acción</option>
+                                      <option>Ciencia Ficción</option>
+                                      <option>Comedia</option>
+                                      <option>Documental</option>
+                                      <option>Drama</option>
+                                      <option>Fantasía</option>
+                                      <option>Musical</option>
+                                      <option>Romántico</option>
+                                      <option>Terror</option>
+                                    </select>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label" for="description">Descripción</label>
+                              <textarea class="form-control" id="description">Ingrese breve descripción. Ésta se mostrará al usuario</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="imgPortada">Imagen de portada</label>
+                                <input type="text" class="form-control" id="imgPortada" placeholder="URL de imagen">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="imgFeatured">Imagen destacada</label>
+                                <input type="text" class="form-control" id="imgFeatured" placeholder="URL de imagen destacada">
+                            </div>
+                            <div class="mb-3 form-check">
+                              <input type="checkbox" class="form-check-input" id="publish">
+                              <label class="form-check-label" for="publish">Publicar</label>
+                            </div>
+                            <button type="submit" class="btn btn-danger">Añadir Película</button>
+                            
+                          </form>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
         <div id="">
             <table class="table">
                 <thead>

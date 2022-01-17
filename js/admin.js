@@ -46,4 +46,5 @@ function feature(index) {
     movies = JSON.parse(localStorage.getItem("movies"));
     productList();
 }
+
 productList();
