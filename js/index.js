@@ -16,3 +16,4 @@ let movies=[
     {codigo:15,nombrePelicula:"Con la magia en los zapatos", categoria:"Comedia",descripcion:"El filme, protagonizado por Adam Sandler (Niños grandes 2), cuenta la historia de un hombre que se gana la vida reparando zapatos que tiene una habilidad excepcional: es capaz de meterse metafísicamente en las vidas de aquellas personas a las que ha arreglado el calzado.",publicado:true,imgPortada:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/wLwquKAvtJ67KPJ2QskasIpS9uv.jpg"},
     {codigo:16,nombrePelicula:"Los Minions", categoria:"Comedia",descripcion:" Pasarán de la helada Antártida, a la ciudad de Nueva York en los años sesenta, para acabar en el Londres de la misma época, donde deberán enfrentarse al mayor reto hasta la fecha: salvar a la raza Minion de la aniquilación.",publicado:true,imgPortada:"https://image.tmdb.org/t/p/w185_and_h278_bestv2/hVK35IfqYsk5jasR15aP5XBgKL1.jpg"},
 ]
+
