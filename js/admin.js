@@ -17,14 +17,20 @@ function productList() {
                     <td>${element.publicado==true ? "Si" : "-"}</td>
                     <td>
                     <div class="options">
-                        <button class="btn btn-danger" data-toggle="tooltip" data-placement="left" title="Eliminar" onclick="deleteProduct(${index})"><i class="fas fa-trash"></i></button>
-                        <button class="btn btn-primary" data-toggle="tooltip" data-placement="left" title="Editar"><i class="fas fa-edit"></i></button>
-                        <button class="btn btn-warning" data-toggle="tooltip" data-placement="left" title="Destacar" onclick="feature(${index})"><i class="fas fa-star"></i></button>
+                        <button class="btn " data-toggle="tooltip" data-placement="left" title="Eliminar" onclick="deleteProduct(${index})"><i class="fas fa-trash"></i></button>
+                        <button class="btn " data-toggle="tooltip" data-placement="left" title="Editar"><i class="fas fa-edit"></i></button>
+                        
+                        <button class=${element.featured==true ? "btn-feature":"btn "} id="btn-feature" data-toggle="tooltip" data-placement="left" title="Destacar" onclick="feature(${index})"><i class="fas fa-star"></i></button>
                     </div>
                     
         </tr>`
-        }
-        movies[index].featured 
+         }
+         
+        //  if(element.featured){
+        //  let activeFav = document.getElementById("btn-feature");
+        //      console.log("es fav")
+        //      activeFav.classList.add("btn-feature");
+        //  }
     })
 };
 
@@ -38,10 +44,14 @@ function deleteProduct(index) {
 
 
 function feature(index) {
+    movieList.innerHTML = "";
+    movies.map(el=> delete el.featured);
     console.log(movies[index])
     let featured = movies[index];
     featured["featured"] = true;
     console.log(movies[index].featured );
+    movies.splice(index,1,featured);
+    localStorage.setItem("movies", JSON.stringify(movies));
     localStorage.setItem("featured", JSON.stringify(featured));
     movies = JSON.parse(localStorage.getItem("movies"));
     productList();
