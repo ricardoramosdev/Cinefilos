@@ -105,7 +105,7 @@
             <button class="btn btn-primary" data-bs-toggle="modal"
             data-bs-target="#newMovie" >Agregar Película +</button>
         </div>
-        
+        <!-- Empieza modal para nueva pelicula -->
         <div class="modal fade " id="newMovie" tabindex="-1" role="dialog" aria-labelledby="newMovie" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
               <div class="modal-content ">
@@ -145,10 +145,14 @@
                             <div class="mb-3">
                                 <label class="form-label" for="imgPortada">Imagen de portada</label>
                                 <input type="text" class="form-control" id="imgPortada" placeholder="URL de imagen">
+                                <small id="size" class="form-text text-muted">Dimenisones recomendadas w185 x h278.</small>
+
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="imgFeatured">Imagen destacada</label>
                                 <input type="text" class="form-control" id="imgFeatured" placeholder="URL de imagen destacada">
+                                <small id="size" class="form-text text-muted">Dimenisones recomendadas w1920 x h800.</small>
+
                             </div>
                             <div class="mb-3 form-check">
                               <input type="checkbox" class="form-check-input" id="publish">
