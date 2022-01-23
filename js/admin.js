@@ -7,7 +7,7 @@ function productList() {
 
         if (element) {
             // Debo rellenar la tabla con los datos del local storage
-
+            console.log(element.categoria)
             movieList.innerHTML += `
         <tr>
                     <th scope='row'>${element.codigo}</th>
