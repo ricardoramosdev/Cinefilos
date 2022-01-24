@@ -117,15 +117,15 @@
                 </div>
                 <div class="modal-body">
                     <div>
-                        <form id="newMovie" >
+                        <form id="newMovie" onsubmit="newMovie(event)">
                             <div class="row">
                                 <div class="mb-3 col">
                                   <label class="form-label" for="name">Nombre</label>
-                                  <input type="text" class="form-control" id="name" placeholder="Nombre de Pelicula">
+                                  <input type="text" class="form-control" id="name" name="name" placeholder="Nombre de Pelicula">
                                 </div>
                                 <div class="mb-3 col">
                                     <label class="form-label" for="category">Categoría</label>
-                                    <select class="form-control" id="category">
+                                    <select class="form-control" id="category"name="category">
                                       <option>Acción</option>
                                       <option>Ciencia Ficción</option>
                                       <option>Comedia</option>
@@ -140,22 +140,22 @@
                             </div>
                             <div class="mb-3">
                               <label class="form-label" for="description">Descripción</label>
-                              <textarea class="form-control" id="description">Ingrese breve descripción. Ésta se mostrará al usuario</textarea>
+                              <textarea class="form-control" id="description" name="description">Ingrese breve descripción. Ésta se mostrará al usuario</textarea>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="imgPortada">Imagen de portada</label>
-                                <input type="text" class="form-control" id="imgPortada" placeholder="URL de imagen">
+                                <input type="text" class="form-control" name="imgPortada" id="imgPortada" placeholder="URL de imagen">
                                 <small id="size" class="form-text text-muted">Dimenisones recomendadas w185 x h278.</small>
 
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="imgFeatured">Imagen destacada</label>
-                                <input type="text" class="form-control" id="imgFeatured" placeholder="URL de imagen destacada">
-                                <small id="size" class="form-text text-muted">Dimenisones recomendadas w1920 x h800.</small>
+                                <input type="text" class="form-control" name="imgFeatured" id="imgFeatured" placeholder="URL de imagen destacada">
+                                <small id="size" class="form-text text-muted">Dimenisones recomendadas w1920 x  h800.</small>
 
                             </div>
                             <div class="mb-3 form-check">
-                              <input type="checkbox" class="form-check-input" id="publish">
+                              <input type="checkbox" class="form-check-input" name="publish" id="publish">
                               <label class="form-check-label" for="publish">Publicar</label>
                             </div>
                             <button type="submit" class="btn btn-danger">Añadir Película</button>
@@ -171,12 +171,12 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Código</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Descripcion</th>
-                        <th scope="col">Publicado</th>
-                        <th scope="col">Opciones</th>
+                        <th scope="col" style="width: 20px;">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Story</th>
+                        <th scope="col">Active</th>
+                        <th scope="col">Edit</th>
                     </tr>
                 </thead>
                 <tbody id="productList">

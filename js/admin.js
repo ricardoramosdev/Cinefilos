@@ -10,13 +10,13 @@ function productList() {
 
             movieList.innerHTML += `
         <tr>
-                    <th scope='row'>${element.codigo}</th>
+                    <th scope='row' ><div style="width:4rem;overflow:hidden;text-overflow: ellipsis;" >${element.codigo}</div></th>
                     <td>${element.nombrePelicula}</td>
                     <td>${element.categoria}</td>
                     <td>${element.descripcion}</td>
                     <td>${element.publicado==true ? "Si" : "-"}</td>
                     <td>
-                    <div class="options">
+                    <div class="options d-flex flex-wrap">
                         <button class="btn " data-toggle="tooltip" data-placement="left" title="Eliminar" onclick="deleteProduct(${index})"><i class="fas fa-trash"></i></button>
                         <button class="btn " data-toggle="tooltip" data-placement="left" title="Editar"><i class="fas fa-edit"></i></button>
                         
@@ -25,12 +25,6 @@ function productList() {
                     
         </tr>`
          }
-         
-        //  if(element.featured){
-        //  let activeFav = document.getElementById("btn-feature");
-        //      console.log("es fav")
-        //      activeFav.classList.add("btn-feature");
-        //  }
     })
 };
 
@@ -56,5 +50,31 @@ function feature(index) {
     movies = JSON.parse(localStorage.getItem("movies"));
     productList();
 }
+function newMovie(event){
+    event.preventDefault();
+    movieList.innerHTML = "";
+    const movieForm = document.getElementsByTagName("form")[1];
+    let newMovie = {
+        codigo: new Date().getTime(),
+        nombrePelicula: movieForm.elements["name"].value,
+        categoria: movieForm.elements["category"].value,
+        descripcion: movieForm.elements["description"].value,
+        publicado: movieForm.elements["publish"].checked,
+        imgPortada: movieForm.elements["imgPortada"].value,
+        imgFeatured: movieForm.elements["imgFeatured"].value,
+    }
+    console.log(newMovie);
+    movies.push(newMovie);
+    localStorage.setItem("movies", JSON.stringify(movies));
+    productList();
 
+}
+function editMovie(index){
+    movieList.innerHTML = "";
+    let editMovie = movies[index];
+    movies.splice(index,1,edited);
+    localStorage.setItem("movies", JSON.stringify(movies));
+    productList();
+
+}
 productList();

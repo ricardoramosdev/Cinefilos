@@ -156,4 +156,4 @@ featuredMovieImg.src = featuredMovie.imgFeatured;
 let featuredMovieDescription = document.getElementById("featuredMovieDescription");
 featuredMovieDescription.innerHTML = featuredMovie.descripcion;
 let featuredMovieBtn = document.getElementById("featuredMovieBtn");
-// featuredMovieBtn.innerHTML = 
+
