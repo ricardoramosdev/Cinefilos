@@ -10,12 +10,13 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/styles/styles.css">
+
     <script src="https://kit.fontawesome.com/62ca135f44.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="position-sticky top-0">
-        <nav class="navbar navbar-expand-md navbar-light ">
+        <nav id="navbar" class="navbar navbar-expand-md navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">CINEFILOS</a>
 
@@ -104,7 +105,8 @@
 
         <div class="card  featured ">
             <img src="" class="card-img" id="featuredMovieImg" alt="imagen pelicula destacada">
-            <div class="card-body d-flex flex-column justify-content-end">
+            <div class="card-body d-flex flex-column justify-content-end modalCard">
+                <!-- agregue la clase modalcard para no pisar card-body -->
                 <h5 class="card-title" id="featuredMovieTitle">Pelicula destacada</h5>
                 <p class="card-text pt-3" id="featuredMovieDescription">With supporting text below as a natural lead-in
                     to additional content.</p>
@@ -112,53 +114,77 @@
             </div>
         </div>
 
+        <br>
+        <hr>
+
         <!--inicio categorias -->
-        <div class="container-fluid ">
+        <div class="container-fluid contenedorCategorias">
 
             <!-- CATEGORIA DRAMA -->
-            <div class="row justify-content-start">
+            <div class="row ">
+
+                <br>
+
                 <h5>DRAMA</h5>
-                <div class="col categorias" id="categoriaDrama" >
-                    
-                   
+                <div class="col categorias d-flex justify-content-evenly" id="categoriaDrama">
                 </div>
-           
             </div>
+
+            <br>
+            <hr>
 
             <!-- CATEGORIA ACCION -->
-            <div class="row justify-content-start">
+
+
+            <div class="row ">
+
+                <br>
+
                 <h5>ACCION</h5>
-                <div class="col categorias" id="categoriaAccion">
-                   
-                </div>
+
+                <br>
+
+                <a href="https://getbootstrap.com/docs/5.1/utilities/interactions/?#pointer-events"
+                    class="linkCategorias" target="_blank">
+                    <div class="col categorias d-flex justify-content-evenly" id="categoriaAccion">
+                    </div>
+                </a>
+
             </div>
+
+            <br>
+            <hr>
 
             <!-- categoria ciencia ficcion -->
-            <div class="row justify-content-start">
+            <div class="row">
+                <br>
                 <h5>CIENCIA FICCION</h5>
-                <div class="col categorias" id="categoriaCiFi">
-                    
-                </div>
-            </div>   
+                <br>
+                <div class="col categorias d-flex justify-content-evenly" id="categoriaCiFi">
 
-            <!-- categoria comedia -->
-            <div class="row justify-content-start">
-                <h5>COMEDIA</h5>
-                <div class="col categorias " id="categoriaComedia">
-                   
                 </div>
             </div>
-                
+            <br>
+            <hr>
+            <!-- categoria comedia -->
+            <div class="row">
+                <br>
+                <h5>COMEDIA</h5>
+                <div class="col categorias d-flex justify-content-evenly " id="categoriaComedia">
+
+                </div>
+            </div>
+
         </div>
 
         <!-- fin categorias -->
-
+        <br>
     </main>
     <footer class="bg-dark text-light">
         <div class="row g-0 align-items-center py-4">
-            <div id="sections " class="col categorias"></div>
-            <div id="reserved " class="col categorias">Todos los derechos reservados &copy;</div>
-            <div class=" col categorias" id="redes">
+            <div id="sections " class="col "></div>
+            <div id="reserved " class="col ">Todos los derechos reservados &copy;</div>
+            <div class=" col " id="redes">
                 <a href=""><i class="fab fa-facebook-square mx-2"></i></a>
                 <a href=""><i class="fa fa-instagram mx-2" aria-hidden="true"></i></a>
                 <a href=""><i class="fa fa-twitter mx-2" aria-hidden="true"></i></a>

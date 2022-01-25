@@ -1,3 +1,7 @@
+/* * {
+background-color: var(--secondary-color);
+} */
+
 :root {
     --primary-color: #E50914;
     --secondary-color: #221F1F;
@@ -5,12 +9,10 @@
 
 }
 
-
-nav {
+#navbar {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-weight: bold;
-    ;
 }
 
 .featured {
@@ -39,25 +41,48 @@ nav {
 }
 
 
-.card-body {
+.modalCard {
     text-shadow: black 2px 2px 2px;
     background-color: rgba(00, 00, 00, 0.4);
     height: 20rem;
     
 }
 
+/* Cambie el nombre card-body por modalCard para no pisar estilos de bootstrap */
+
 /* marked-title{
     position: ;
 } */
 
-a {
+/* a {
     text-decoration: none;
     color: var(--tertiary-color);
-}
+} */
 
 .categorias{
-    
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: flex ;
+    justify-content:space-around;
+    z-index: -2;
 }
+.imgCard{
+    width: 250px;
+    height: 330px;
+}
+
+.linkCategorias{
+    color: #221F1F;
+    z-index: -1;
+}
+.linkCategorias:hover{
+    cursor: pointer;
+}
+/* 
+main {
+    background-color:var(--secondary-color);
+    color:var(--tertiary-color);
+} */
+
+/* .contenedorCategorias {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}  */
