@@ -6,6 +6,18 @@
     --tertiary-color: #F5F5F1;
 
 }
+html {
+    
+    position: relative;
+  }
+body{
+    display: flex;
+    flex-direction:column;
+    height: 100vh;
+}
+main{
+    flex: 1;
+}
 
 #navbar {
     background-color: var(--primary-color);
@@ -40,7 +52,7 @@
 
 
 .modalCard {
-    text-shadow: black 2px 2px 2px;
+    text-shadow: black 1px 1px 2px;
     background-color: rgba(00, 00, 00, 0.4);
     height: 20rem;
     
@@ -66,12 +78,8 @@
     cursor: pointer;
 }
 
-main {
-    background-color:var(--secondary-color);
-    color:var(--tertiary-color);
-    z-index: -6;
-}
 
+ 
 /* .contenedorCategorias {
     background-color: var(--secondary-color);
     color: var(--tertiary-color);
@@ -106,4 +114,42 @@ main {
    
     font-size: 1rem;
     border-radius: 0.25rem;
+}
+/* footer */
+footer{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+}
+footer a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    
+}
+footer a:hover{
+    color:var(--primary-color)
+}
+
+/* register */
+#registerForm{
+   background-image:url("https://i1.wp.com/codigopublico.com/wp-content/uploads/2020/07/palomitas.jpg?fit=1024%2C576&ssl=1");
+   background-size: cover;
+   
+   
+}
+.contenido-register{
+    display: flex;
+   
+    background-color: var(--secondary-color);
+    height: 100%;
+    
+}
+
+.register-form-header{
+    border-radius: 1rem;
+    
+}
+.centrado{
+    justify-content: center;
+    align-items: center;
 }

@@ -55,87 +55,89 @@
 
     </header>
     <main>
-        <!-- Modal -->
-        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
-                        <button type="button" class="close btn-danger" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-center" cz-shortcut-listen="true">
-
-                        <form class="form-signin" id="userLoginForm" onsubmit="userLogin(event)">
-                            <img class=""
-                                src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khvCFpB5PnRrNwXs1M3EMoAJtliQsg...Nq9vo9"
-                                alt="" width="100">
-                            <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
-                            <label for="inputEmail" class="sr-only">Email</label>
-                            <input type="email" id="loginEmail" name="email" class="form-control" placeholder="Email"
-                                required autofocus="">
-                            <label for="inputPassword" class="sr-only">Contraseña</label>
-                            <input type="password" id="loginPassword" name="password" class="form-control"
-                                placeholder="Contraseña" required>
-                            <div id="loginError" class="text-danger"></div>
-                            <div class="my-2">
-
-                                <a href="#" class="text-danger text-decoration-underline">Olvidé mi contraseña</a>
-                            </div>
-                            <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
-                            <p class="mt-2 mb-3 text-muted">© 2022</p>
-                        </form>
-                        <hr>
-                        <div class="mb-3">
-
-                            <a href="/pages/register.html" class="text-danger ">Registrar un usuario nuevo</a>
+        <div class="contenido-register centrado d-flex flex-column ">
+            <!-- Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                            <button type="button" class="close btn-danger" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
+                        <div class="modal-body text-center" cz-shortcut-listen="true">
+                            <form class="form-signin" id="userLoginForm" onsubmit="userLogin(event)">
+                                <img class=""
+                                    src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khvCFpB5PnRrNwXs1M3EMoAJtliQsg...Nq9vo9"
+                                    alt="" width="100">
+                                <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+                                <label for="inputEmail" class="sr-only">Email</label>
+                                <input type="email" id="loginEmail" name="email" class="form-control" placeholder="Email"
+                                    required autofocus="">
+                                <label for="inputPassword" class="sr-only">Contraseña</label>
+                                <input type="password" id="loginPassword" name="password" class="form-control"
+                                    placeholder="Contraseña" required>
+                                <div id="loginError" class="text-danger"></div>
+                                <div class="my-2">
+                                    <a href="#" class="text-danger text-decoration-underline">Olvidé mi contraseña</a>
+                                </div>
+                                <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
+                                <p class="mt-2 mb-3 text-muted">© 2022</p>
+                            </form>
+                            <hr>
+                            <div class="mb-3">
+                                <a href="/pages/register.html" class="text-danger ">Registrar un usuario nuevo</a>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Fin Modal -->
-        <div class=" container my-3 bg-dark text-light ">
-            <div class="register-form-header bg-danger">
-                <h1>Registrate</h1>
-                <p>Es fácil y rápido.</p>
-
+            <!-- Fin Modal -->
+            <div id="registerForm"class=" container-fluid pt-3 text-light w-75 centrado" >
+                <div class="register-form-header  bg-danger text-center " >
+                    <h1>Registrate</h1>
+                    <p>Es fácil y rápido.</p>
+                </div>
+                <div class="row">
+                    <div " class="modalCard" >
+                        <div  class="col-md-6">
+                            <form id="userRegisterForm" onsubmit="register(event)">
+                                <div class="form-group">
+                                    <label for="nameInput">Nombre Completo</label>
+                                    <input type="text" name="name" class="form-control" id="nameInput"
+                                        placeholder="Cine Filos" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailInput">Email</label>
+                                    <input type="email" name="email" class="form-control" id="emailInput"
+                                        aria-describedby="emailHelp" placeholder="example@example.ex" required>
+                                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tus
+                                        datos.</small>
+                                    <div id="errorMessage" class="text-warning"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="passwordInput">Contraseña</label>
+                                    <input type="password" class="form-control" id="passwordInput" placeholder="Contraseña"
+                                        minlength="8"
+                                        title="Debe contener al menos un numero, una letra mayúscula, una letra minuscula y tener 8 o más caracteres."
+                                        name="password" required>
+                                </div>
+                                <div class="form-check my-2">
+                                    <input type="checkbox" class="form-check-input" name="isAdmin" id="isAdmin">
+                                    <label class="form-check-label " for="isAdmin">Registrarme como administrador</label>
+                                </div>
+                                <button type="submit" class="btn btn-danger mb-3">Registrarme</button>
+                            </form>
+                        </div>
+                        <div class=""></div>
+                    </div>
+                </div>
             </div>
-            <form id="userRegisterForm" onsubmit="register(event)">
-                <div class="form-group">
-                    <label for="nameInput">Nombre Completo</label>
-                    <input type="text" name="name" class="form-control" id="nameInput" placeholder="Cine Filos"
-                        required>
-
-                </div>
-                <div class="form-group">
-                    <label for="emailInput">Email</label>
-                    <input type="email" name="email" class="form-control" id="emailInput" aria-describedby="emailHelp"
-                        placeholder="example@example.ex" required>
-                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tus datos.</small>
-                    <div id="errorMessage" class="text-warning"></div>
-                </div>
-                <div class="form-group">
-                    <label for="passwordInput">Contraseña</label>
-                    <input type="password" class="form-control" id="passwordInput" placeholder="Contraseña"
-                        minlength="8"
-                        title="Debe contener al menos un numero, una letra mayúscula, una letra minuscula y tener 8 o más caracteres."
-                        name="password" required>
-                </div>
-                <div class="form-check my-2">
-                    <input type="checkbox" class="form-check-input" name="isAdmin" id="isAdmin">
-                    <label class="form-check-label " for="isAdmin">Registrarme como administrador</label>
-                </div>
-                <button type="submit" class="btn btn-danger mb-3">Registrarme</button>
-            </form>
         </div>
 
     </main>
