@@ -23,7 +23,9 @@ main{
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-weight: bold;
+    
 }
+
 
 .featured {
     z-index: -1;
@@ -134,7 +136,8 @@ footer a:hover{
 #registerForm{
    background-image:url("https://i1.wp.com/codigopublico.com/wp-content/uploads/2020/07/palomitas.jpg?fit=1024%2C576&ssl=1");
    background-size: cover;
-   
+   border-radius: 2rem;
+   overflow: hidden;
    
 }
 .contenido-register{
@@ -147,6 +150,7 @@ footer a:hover{
 
 .register-form-header{
     border-radius: 1rem;
+    background-color: var(--primary-color);
     
 }
 .centrado{

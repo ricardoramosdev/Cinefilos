@@ -1,11 +1,12 @@
-let movies = [{
+let movies = JSON.parse(localStorage.getItem("movies"))||[{
         codigo: 01,
         nombrePelicula: "Avengers: Endgame",
         categoria: "Acción",
         descripcion: "Tras los sucesos de “Vengadores: Infinity War”, los superhéroes que sobrevivieron a Thanos se reunen para poner en práctica un plan definitivo que podría acabar con el villano definitivamente. No saben si funcionará, pero es su única oportunidad de intentarlo. Cuarta entrega de la saga “Vengadores”",
         publicado: false,
         imgPortada: "https://image.tmdb.org/t/p/w185_and_h278_bestv2/qwLbQSeFy6ht8skBtao7lAZjsDo.jpg",
-        imgFeatured:  "https://image.tmdb.org/t/p/w1280/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg"} ,
+        imgFeatured:  "https://image.tmdb.org/t/p/w1280/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+        } ,
     {
         codigo: 02,
         nombrePelicula: "La Liga de la Justicia",
@@ -147,8 +148,9 @@ let movies = [{
 
 localStorage.setItem("movies", JSON.stringify(movies));
 
-
 let featuredMovie = JSON.parse(localStorage.getItem("featured"))||movies[0];
+localStorage.setItem("featured", JSON.stringify(featuredMovie));
+
 let featuredMovieTitle = document.getElementById("featuredMovieTitle");
 featuredMovieTitle.innerHTML = featuredMovie.nombrePelicula;
 let featuredMovieImg = document.getElementById("featuredMovieImg");

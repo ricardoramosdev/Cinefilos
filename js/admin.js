@@ -1,5 +1,6 @@
 let movies = JSON.parse(localStorage.getItem("movies")) || [];
 const movieList = document.querySelector("#productList")
+let featured = JSON.parse(localStorage.getItem("featured")) || movies[0];
 
 function productList() {
 
@@ -8,6 +9,8 @@ function productList() {
         if (element) {
             // Debo rellenar la tabla con los datos del local storage
             console.log(element.categoria)
+
+
             movieList.innerHTML += `
         <tr>
                     <th scope='row' ><div style="width:4rem;overflow:hidden;text-overflow: ellipsis;" >${element.codigo}</div></th>
@@ -24,33 +27,52 @@ function productList() {
                     </div>
                     
         </tr>`
-         }
+        }
     })
 };
 
 function deleteProduct(index) {
-    movieList.innerHTML = "";
-    movies.splice(index, 1);
-    localStorage.setItem("movies", JSON.stringify(movies));
-    movies = JSON.parse(localStorage.getItem("movies"));
-    productList();
+    Swal.fire({
+        title: 'Esta seguro de eliminar este item?',
+        text: "No se podrá revertir este paso!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#777',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, eliminar!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Eliminado!',
+                'Este item ha sido eliminado.',
+                'success'
+            )
+            movieList.innerHTML = "";
+            movies.splice(index, 1);
+            localStorage.setItem("movies", JSON.stringify(movies));
+            movies = JSON.parse(localStorage.getItem("movies"));
+            productList();
+        }
+    })
+
 };
 
 
 function feature(index) {
     movieList.innerHTML = "";
-    movies.map(el=> delete el.featured);
+    movies.map(el => delete el.featured);
     console.log(movies[index])
     let featured = movies[index];
     featured["featured"] = true;
-    console.log(movies[index].featured );
-    movies.splice(index,1,featured);
+    console.log(movies[index].featured);
+    movies.splice(index, 1, featured);
     localStorage.setItem("movies", JSON.stringify(movies));
     localStorage.setItem("featured", JSON.stringify(featured));
     movies = JSON.parse(localStorage.getItem("movies"));
     productList();
 }
-function newMovie(event){
+
+function newMovie(event) {
     event.preventDefault();
     movieList.innerHTML = "";
     const movieForm = document.getElementsByTagName("form")[1];
@@ -69,12 +91,13 @@ function newMovie(event){
     productList();
 
 }
-function editMovie(index){
-    movieList.innerHTML = "";
-    let editMovie = movies[index];
-    movies.splice(index,1,edited);
-    localStorage.setItem("movies", JSON.stringify(movies));
-    productList();
 
-}
+// function editMovie(index) {
+//     movieList.innerHTML = "";
+//     let editMovie = movies[index];
+//     movies.splice(index, 1, edited);
+//     localStorage.setItem("movies", JSON.stringify(movies));
+//     productList();
+
+// }
 productList();

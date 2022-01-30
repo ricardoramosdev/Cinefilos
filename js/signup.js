@@ -1,5 +1,8 @@
 const userRegisterForm = document.getElementById("userRegisterForm")
-let users = JSON.parse(localStorage.getItem("users")) || [];
+let users = JSON.parse(localStorage.getItem("users")) || [{name:"cinefilo",
+email:"cine@filos.com",
+password:"cinefilos",
+isAdmin:false}]; //Harcode para test
 
 function register(evt) {
     evt.preventDefault();
@@ -22,11 +25,6 @@ function register(evt) {
         }
 
 
-        // users.find(us => {
-        //     if (us.email == userRegisterForm.elements["email"].value) {
-        //         document.getElementById("errorMessage").innerHTML = "Email en uso";
-        //         return;
-        //     }
     })
     console.log(usuarioExistente)
     if (!usuarioExistente) {
@@ -75,7 +73,8 @@ function userLogin(evt) {
             } else {
                 document.getElementById("loginError").innerHTML = "Alguno de los datos no es correcto";
             }
-        }
+        }else {
+            document.getElementById("loginError").innerHTML = "Alguno de los datos no es correcto";}
     });
 
 
@@ -83,6 +82,6 @@ function userLogin(evt) {
 
 function userLogout(){
     localStorage.removeItem("currentUser")
-   window.location.href="/index.html"
+   window.location.href="/index.html"//Ver si este paso no es redundante con login validation
     
 }
