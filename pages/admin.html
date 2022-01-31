@@ -100,10 +100,10 @@
             </div>
         </div>
         <!-- Fin Modal -->
-        <div id="admin-title">
+        <div id="admin-title" class="ms-3 my-2">
             <h3>Administrar Productos</h3>
             <button class="btn btn-primary" data-bs-toggle="modal"
-            data-bs-target="#newMovie" >Agregar Película +</button>
+            data-bs-target="#newMovie"  >Agregar Película +</button>
         </div>
         <!-- Empieza modal para nueva pelicula -->
         <div class="modal fade " id="newMovie" tabindex="-1" role="dialog" aria-labelledby="newMovie" aria-hidden="true">
@@ -159,6 +159,68 @@
                               <label class="form-check-label" for="publish">Publicar</label>
                             </div>
                             <button type="submit" class="btn btn-danger">Añadir Película</button>
+                            
+                          </form>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Empieza modal para editar pelicula -->
+        <div class="modal fade " id="editMovie" tabindex="-1" role="dialog" aria-labelledby="editMovie" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content ">
+                <div class="modal-header">
+                  <h5 class="modal-title">Editar Película</h5>
+                  <button type="button" class="close btn-danger" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form id="editMovie" onsubmit="editMovie(event)">
+                            <div class="row">
+                                <div class="mb-3 col">
+                                  <label class="form-label" for="name">Nombre</label>
+                                  <input type="text" class="form-control" id="name" name="name" placeholder="Nombre de Pelicula">
+                                </div>
+                                <div class="mb-3 col">
+                                    <label class="form-label" for="category">Categoría</label>
+                                    <select class="form-control" id="category"name="category">
+                                      <option>Acción</option>
+                                      <option>Ciencia Ficción</option>
+                                      <option>Comedia</option>
+                                      <option>Documental</option>
+                                      <option>Drama</option>
+                                      <option>Fantasía</option>
+                                      <option>Musical</option>
+                                      <option>Romántico</option>
+                                      <option>Terror</option>
+                                    </select>
+                                  </div>
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label" for="description">Descripción</label>
+                              <textarea class="form-control" id="description" name="description">Ingrese breve descripción. Ésta se mostrará al usuario</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="imgPortada">Imagen de portada</label>
+                                <input type="text" class="form-control" name="imgPortada" id="imgPortada" placeholder="URL de imagen">
+                                <small id="size" class="form-text text-muted">Dimenisones recomendadas w185 x h278.</small>
+
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="imgFeatured">Imagen destacada</label>
+                                <input type="text" class="form-control" name="imgFeatured" id="imgFeatured" placeholder="URL de imagen destacada">
+                                <small id="size" class="form-text text-muted">Dimenisones recomendadas w1920 x  h800.</small>
+
+                            </div>
+                            <div class="mb-3 form-check">
+                              <input type="checkbox" class="form-check-input" name="publish" id="publish">
+                              <label class="form-check-label" for="publish">Publicar</label>
+                            </div>
+                            <button type="submit" class="btn btn-danger">Editar</button>
                             
                           </form>
                     </div>

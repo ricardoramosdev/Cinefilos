@@ -147,8 +147,8 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
 // imagenes extraidas de https://www.themoviedb.org/
 
 localStorage.setItem("movies", JSON.stringify(movies));
-
-let featuredMovie = JSON.parse(localStorage.getItem("featured"))||movies[0];
+// import {feature} from "/js/admin" ;
+let featuredMovie = JSON.parse(localStorage.getItem("featured"))|| movies[0];
 localStorage.setItem("featured", JSON.stringify(featuredMovie));
 
 let featuredMovieTitle = document.getElementById("featuredMovieTitle");
@@ -158,3 +158,7 @@ featuredMovieImg.src = featuredMovie.imgFeatured;
 let featuredMovieDescription = document.getElementById("featuredMovieDescription");
 featuredMovieDescription.innerHTML = featuredMovie.descripcion;
 let featuredMovieBtn = document.getElementById("featuredMovieBtn");
+
+function detallePelicula(){
+    console.log("Hola mundo");
+}

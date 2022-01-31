@@ -13,7 +13,7 @@ html {
 body{
     display: flex;
     flex-direction:column;
-    height: 100vh;
+    
 }
 main{
     flex: 1;
@@ -25,7 +25,14 @@ main{
     font-weight: bold;
     
 }
+.navbar-toggler:focus{
+    /* box-shadow: none; */
+}
 
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
 
 .featured {
     z-index: -1;
@@ -68,8 +75,8 @@ main{
     z-index: -2;
 }
 .imgCard{
-    width: 250px;
-    height: 330px;
+    /* width: 250px;
+    height: 330px; */
 }
 
 .linkCategorias{

@@ -2,7 +2,7 @@ const userRegisterForm = document.getElementById("userRegisterForm")
 let users = JSON.parse(localStorage.getItem("users")) || [{name:"cinefilo",
 email:"cine@filos.com",
 password:"cinefilos",
-isAdmin:false}]; //Harcode para test
+isAdmin:true}]; //Harcode para test
 
 function register(evt) {
     evt.preventDefault();
