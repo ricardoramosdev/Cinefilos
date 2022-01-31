@@ -21,7 +21,7 @@ function productList() {
                     <td>
                     <div class="options d-flex flex-wrap">
                         <button class="btn " data-toggle="tooltip" data-placement="left" title="Eliminar" onclick="deleteProduct(${index})"><i class="fas fa-trash"></i></button>
-                        <button class="btn " data-toggle="tooltip" data-placement="left" title="Editar"  data-bs-toggle="modal"
+                        <button class="btn " id="editMovie" data-toggle="tooltip" data-placement="left" title="Editar"  data-bs-toggle="modal"
                         data-bs-target="#editMovie" onclick="editMovie(${index})"><i class="fas fa-edit"></i></button>
                         
                         <button class=${element.featured==true ? "btn-feature":"btn "} id="btn-feature" data-toggle="tooltip" data-placement="left" title="Destacar. Este titulo aparecera en la cabecera de la pantalla principal" onclick="feature(${index})"><i class="fas fa-star"></i></button>
@@ -74,6 +74,8 @@ function feature(index) {
 }
 
 function newMovie(event) {
+    movieList.innerHTML = "";
+
     event.preventDefault();
     const movieForm = document.getElementsByTagName("form")[1];
     
@@ -92,22 +94,63 @@ function newMovie(event) {
     productList();
 
 }
+const movieFormEdition = document.getElementsByTagName("form")[2];
 
 function editMovie(index) {
-    movieList.innerHTML = "";
-    const movieForm = document.getElementsByTagName("form")[2];
+    
     let editMovie = movies[index];
-    movieForm.elements["name"].value=editMovie.nombrePelicula;
-    movieForm.elements["category"].value=editMovie.categoria;
-    movieForm.elements["description"].value=editMovie.descripcion;
-    movieForm.elements["publish"].checked=editMovie.publicado;
-    movieForm.elements["imgPortada"].value=editMovie.imgPortada;
-    movieForm.elements["imgFeatured"].value=editMovie.imgFeatured;
-}
-function confirmEdition(index){
+    movieFormEdition.elements["name"].value=editMovie.nombrePelicula;
+    movieFormEdition.elements["category"].value=editMovie.categoria;
+    movieFormEdition.elements["description"].value=editMovie.descripcion;
+    movieFormEdition.elements["publish"].checked=editMovie.publicado;
+    movieFormEdition.elements["imgPortada"].value=editMovie.imgPortada;
+    movieFormEdition.elements["imgFeatured"].value=editMovie.imgFeatured;
+    document.getElementById("editMovie").setAttribute("index",index)
+    
 
-    movies.splice(index, 1);
-    newMovie();
+}
+function confirmEdition(event){
+    event.preventDefault();
+    
+    Swal.fire({
+        title: 'Esta seguro de editar este item?',
+        
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#777',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Editar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Editado',
+                'Este item ha sido modificado.',
+                'success'
+            )
+            movieList.innerHTML = "";
+    
+            let indice =document.getElementById("editMovie").getAttribute("index")
+             
+             const movieFormEdition = document.getElementsByTagName("form")[2];
+         
+             let editedMovie = {
+                 codigo:movies[indice].codigo,
+                 nombrePelicula: movieFormEdition.elements["name"].value,
+                 categoria: movieFormEdition.elements["category"].value,
+                 descripcion: movieFormEdition.elements["description"].value,
+                 publicado: movieFormEdition.elements["publish"].checked,
+                 imgPortada: movieFormEdition.elements["imgPortada"].value,
+                 imgFeatured: movieFormEdition.elements["imgFeatured"].value,
+             }
+           
+             movies.splice(indice, 1,editedMovie);
+         
+             localStorage.setItem("movies", JSON.stringify(movies));
+             productList();
+             window.location.reload()
+        }
+    })
+   
     
 
 }
