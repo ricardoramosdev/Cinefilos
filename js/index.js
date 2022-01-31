@@ -1,5 +1,5 @@
 let movies = JSON.parse(localStorage.getItem("movies"))||[{
-        codigo: 01,
+        codigo: 1,
         nombrePelicula: "Avengers: Endgame",
         categoria: "Acción",
         descripcion: "Tras los sucesos de “Vengadores: Infinity War”, los superhéroes que sobrevivieron a Thanos se reunen para poner en práctica un plan definitivo que podría acabar con el villano definitivamente. No saben si funcionará, pero es su única oportunidad de intentarlo. Cuarta entrega de la saga “Vengadores”",
@@ -8,7 +8,7 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
         imgFeatured:  "https://image.tmdb.org/t/p/w1280/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
         } ,
     {
-        codigo: 02,
+        codigo: 2,
         nombrePelicula: "La Liga de la Justicia",
         categoria: "Acción",
         descripcion: "Decidido a garantizar que el último sacrificio de Superman no fuera en vano, Bruce Wayne alinea fuerzas con Diana Prince con planes de reclutar un equipo de metahumanos para proteger al mundo de una amenaza inminente de proporciones catastróficas",
@@ -18,7 +18,7 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
         
     },
     {
-        codigo: 03,
+        codigo: 3,
         nombrePelicula: "Godzilla vs Kong",
         categoria: "Acción",
         descripcion: "Godzilla y Kong, dos de las fuerzas más poderosas de un planeta habitado por todo tipo de aterradoras criaturas, se enfrentan en un espectacular combate que sacude los cimientos de la humanidad.",
@@ -27,7 +27,7 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
         imgFeatured:  "https://cuevana3.ws/wp-content/uploads/2021/03/godzilla-vs-kong-22513-backdrop.jpg"
     },
     {
-        codigo: 04,
+        codigo: 4,
         nombrePelicula: "Spider-Man: Sin camino a casa",
         categoria: "Acción",
         descripcion: "Peter Parker está desenmascarado y ya no puede separar su vida normal de las altas apuestas de ser un superhéroe. Cuando le pide ayuda al Doctor Strange, lo que está en juego se vuelve aún más peligroso, lo que lo obliga a descubrir lo que realmente significa ser Spider-Man.",
@@ -36,7 +36,7 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
         imgFeatured:  "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/1Rr5SrvHxMXHu5RjKpaMba8VTzi.jpg"
     },
     {
-        codigo: 05,
+        codigo: 5,
         nombrePelicula: "Joker",
         categoria: "Drama",
         descripcion: "Situada en los años 80. Un cómico fallido es arrastrado a la locura, convirtiendo su vida en una vorágine de caos y delincuencia que poco a poco lo llevará a ser el psicópata criminal más famoso de Gotham.",
@@ -45,7 +45,7 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
         imgFeatured:  "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg"
     },
     {
-        codigo: 06,
+        codigo: 6,
         nombrePelicula: "Siempre contigo",
         categoria: "Drama",
         descripcion: "Aharon ha dedicado toda su vida a criar a su hijo Uri. Viven juntos en una rutina amable, lejos del mundo real. Pero Uri es autista y ya es lo suficientemente adulto para ir a un hogar especializado. En su camino a la institución, Aharon decide escaparse con su hijo y se lanzan a la carretera, sabiendo que Uri no está preparado para la separación. Aunque quizá sea el padre el que no está preparado.",
@@ -54,7 +54,7 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
         imgFeatured:  "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/yNLH0l3oVTV4tGWQ1kn9lOPd32n.jpg"
     },
     {
-        codigo: 07,
+        codigo: 7,
         nombrePelicula: "After The End",
         categoria: "Drama",
         descripcion: "El mundo ha quedado en ruinas tras el brote de una aterradora enfermedad. En lo más profundo de la campiña australiana, un grupo de supervivientes se ve inmerso en una lucha constante por mantenerse con vida.",
@@ -63,7 +63,7 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
         imgFeatured:  "https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces_filter(blur)/hjt6z9M3idg50Ithl3rI5p1lFoc.jpg"
     },
     {
-        codigo: 08,
+        codigo: 8,
         nombrePelicula: "Made in China",
         categoria: "Drama",
         descripcion: "Mientras trabaja para una turbia empresa inmobiliaria en Shanghai, Bryan Zellerman es incriminado por sus corruptos empleadores. Enfrentado a la elección entre escapar o descubrir la verdad detrás de su traición, su camino se desvía terriblemente fuera de control.",
@@ -72,7 +72,7 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
         imgFeatured:  "https://image.tmdb.org/t/p/w185_and_h278_bestv2/yDhSW9tST2TLyrC1nvOW199NHWl.jpg"
     },
     {
-        codigo: 09,
+        codigo: 9,
         nombrePelicula: "Matrix Resurrections",
         categoria: "Ciencia Ficción",
         descripcion: "Cuarta entrega de la franquicia “Matrix”, que estará dirigida en solitario por Lana Wachowski. La producción del film arrancará en 2020, con Keanu Reeves y Carrie-Anne Moss interpretando de nuevo a sus personajes Neo y Trinity, respectivamente.",
@@ -148,7 +148,20 @@ let movies = JSON.parse(localStorage.getItem("movies"))||[{
 
 localStorage.setItem("movies", JSON.stringify(movies));
 // import {feature} from "/js/admin" ;
-let featuredMovie = JSON.parse(localStorage.getItem("featured"))|| movies[0];
+
+console.log(JSON.parse(localStorage.getItem("featured")))
+
+if(JSON.parse(localStorage.getItem("featured"))==null){
+    let featured = movies[0];
+    featured["featured"] = true;
+    console.log(featured.featured);
+    movies.splice(0, 1, featured);
+    localStorage.setItem("movies", JSON.stringify(movies));
+    localStorage.setItem("featured", JSON.stringify(featured));
+    
+}
+let featuredMovie = JSON.parse(localStorage.getItem("featured")) 
+
 localStorage.setItem("featured", JSON.stringify(featuredMovie));
 
 let featuredMovieTitle = document.getElementById("featuredMovieTitle");
