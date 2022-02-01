@@ -54,3 +54,39 @@ a {
     text-decoration: none;
     color: var(--tertiary-color);
 }
+
+.desciption     {
+    width: 100%;
+    float: left;
+    padding: 25px;
+    overflow: hidden;
+}
+
+}
+ .poster                          
+  { float: left;
+    width: 140px;
+    position: relative;
+    box-sizing: border-box; 
+}
+.recomendations     {
+    width: 300px;
+    height: 100%;
+    float: left;
+    padding left: 30px;
+  
+    
+  
+   .recom-item  {
+    position: relative;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 40%
+   }
+   .data {
+      padding: 30px;
+      margin: 40px;
+
+   }
