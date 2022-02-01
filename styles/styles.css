@@ -4,7 +4,7 @@ background-color: var(--secondary-color);
 
 :root {
     --primary-color: #E50914;
-    --secondary-color: #221F1F;
+    --secondary-color: black;
     --tertiary-color: #F5F5F1;
 
 }
@@ -54,35 +54,53 @@ background-color: var(--secondary-color);
     position: ;
 } */
 
-/* a {
+
+/* 
+a {
     text-decoration: none;
-    color: var(--tertiary-color);
+    color: aqua;
 } */
 
 .categorias{
     display: flex ;
     justify-content:space-around;
-    z-index: -2;
+    
 }
-.imgCard{
+/* .imgCard{
     width: 250px;
     height: 330px;
-}
-
-.linkCategorias{
-    color: #221F1F;
-    z-index: -1;
-}
-.linkCategorias:hover{
-    cursor: pointer;
-}
-/* 
-main {
-    background-color:var(--secondary-color);
-    color:var(--tertiary-color);
 } */
-
-/* .contenedorCategorias {
-    background-color: var(--secondary-color);
+.nombresCategorias{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    height: min-content;
+}
+.mainClass{
+    background-color: black;
     color: var(--tertiary-color);
-}  */
+}
+/* .linkCategorias:hover{
+    cursor: pointer;
+} */
+.paginas{
+   background-color: #141515 ;   
+   width: 250px;
+   /* width: 100%;
+   space-between: middle; */
+}
+
+.paginas:hover {
+cursor: pointer;
+width: 250px;
+
+
+    /* transform: scale(1.1); */
+}
+
+.contenedorCategorias {
+    
+}
+    /* 
+    #section {
+        display: none;
+    } */
