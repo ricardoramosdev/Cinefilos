@@ -11,7 +11,7 @@ function categorias() {
     
 
     movies.forEach(function (el, index) {
-
+        if(el.publicado){ //agrego esta condicion para que solo muestre las peliculas que el administrador tiene marcadas como publicadas
         if (el.categoria === "Drama") {
             Drama.innerHTML += `
         <button class="btn" onclick="detallePelicula(${index})" href="/pages/pagesinfo.html" >
@@ -60,7 +60,7 @@ function categorias() {
             </div>
         </button>
         `
-        }
+        }}
     })
     
 };
