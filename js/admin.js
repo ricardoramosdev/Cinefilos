@@ -6,7 +6,6 @@ function productList() {
     console.log("Product list deploy")
 
     movies.forEach(function (element, index) {
-
         if (element) {
             // Debo rellenar la tabla con los datos del local storage
 
@@ -57,7 +56,6 @@ function deleteProduct(index) {
     })
 
 };
-
 
 function feature(index) {
     movieList.innerHTML = "";
@@ -155,6 +153,5 @@ function confirmEdition(event){
 
 }
 
-// export{feature}
 
 productList();

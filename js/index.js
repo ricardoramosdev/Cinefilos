@@ -171,7 +171,3 @@ featuredMovieImg.src = featuredMovie.imgFeatured;
 let featuredMovieDescription = document.getElementById("featuredMovieDescription");
 featuredMovieDescription.innerHTML = featuredMovie.descripcion;
 let featuredMovieBtn = document.getElementById("featuredMovieBtn");
-
-function detallePelicula(){
-    console.log("Hola mundo");
-}
