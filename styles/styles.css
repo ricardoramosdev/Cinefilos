@@ -154,12 +154,13 @@ footer a:hover {
 }
 
 .paginas {
-  background-color: #141515;
-  /* width: 250px; */
-/* }
+background-color: #141515;
+width: 250px;
+}
 
-.paginas:hover {
+/* 
+ .paginas:hover {
   cursor: pointer;
   width: 250px;
 
-} */
+}  */
