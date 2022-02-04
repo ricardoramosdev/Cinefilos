@@ -4,6 +4,7 @@ let featured = JSON.parse(localStorage.getItem("featured")) || movies[0];
 
 function productList() {
     console.log("Product list deploy")
+    movieList.innerHTML = "";
 
     movies.forEach(function (element, index) {
         if (element) {
@@ -47,7 +48,6 @@ function deleteProduct(index) {
                 'Este item ha sido eliminado.',
                 'success'
             )
-            movieList.innerHTML = "";
             movies.splice(index, 1);
             localStorage.setItem("movies", JSON.stringify(movies));
             movies = JSON.parse(localStorage.getItem("movies"));
@@ -58,7 +58,6 @@ function deleteProduct(index) {
 };
 
 function feature(index) {
-    movieList.innerHTML = "";
     movies.map(el => delete el.featured);
     console.log(movies[index])
     let featured = movies[index];
@@ -72,7 +71,6 @@ function feature(index) {
 }
 
 function newMovie(event) {
-    movieList.innerHTML = "";
 
     event.preventDefault();
     const movieForm = document.getElementsByTagName("form")[1];
@@ -125,7 +123,6 @@ function confirmEdition(event){
                 'Este item ha sido modificado.',
                 'success'
             )
-            movieList.innerHTML = "";
     
             let indice =document.getElementById("editMovie").getAttribute("index")
              

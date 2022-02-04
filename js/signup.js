@@ -4,34 +4,32 @@ email:"cine@filos.com",
 password:"cinefilos",
 isAdmin:true}]; //Harcode para test
 
-function register(evt) {
-    evt.preventDefault();
-    console.log(evt)
-    console.log(users)
-    let userRegister = {
-        name: userRegisterForm.elements["name"].value,
-        email: userRegisterForm.elements["email"].value,
-        password: userRegisterForm.elements["password"].value,
-        isAdmin: userRegisterForm.elements["isAdmin"].checked,
+class User {
+    constructor(name,email,password,isAdmin){
+this.name=name;
+this.email=email;
+this.password=password;
+this.isAdmin=isAdmin;
+
     }
+}
+function register(evt){
+    evt.preventDefault();
+    const {name,email,password,isAdmin} = userRegisterForm.elements;
+    const user = new User(name.value,email.value,password.value,isAdmin.checked);
+
     let usuarioExistente = users.find(us => {
-        if (us.email == userRegisterForm.elements["email"].value) {
+        if (us.email == email.value) {
             document.getElementById("errorMessage").innerHTML = "Email en uso";
-            console.log("email en uso")
             return true
         } else {
-            console.log("email disponible")
             return false
         }
-
-
     })
-    console.log(usuarioExistente)
+    
     if (!usuarioExistente) {
-
-        users.push(userRegister);
+        users.push(user);
         localStorage.setItem("users", JSON.stringify(users))
-        console.log("usuario creado")
         userCreated();
     }
 }
