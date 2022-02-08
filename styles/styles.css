@@ -63,36 +63,41 @@ main {
   height: 20rem;
 }
 
-/* Cambie el nombre card-body por modalCard para no pisar estilos de bootstrap */
 
-.categorias {
-  display: flex;
-  justify-content: space-around;
+/* CARDS */
+
+.contenedorCategorias {
+/*   
+  object-fit: cover;
+  object-position: center center; */
+} 
+.categoriasRow {
+  justify-content: flex-end!important;
+  /* height: 100%;
+  width: 100%; */
+  
 }
+.categorias {
+  /* justify-content: center;
+  height: 100%; */
 
-/* .imgCard{
-    width: 250px;
-    height: 330px;
-} */
+}
 
 .nombresCategorias {
   color: var(--secondary-color);
   background-color: var(--primary-color);
-  height: min-content;
+  
 }
+
+.paginas {
+  background-color: #141515;
+}
+
+/* CIERRE CARDS */
 
 .mainClass {
   background-color: black; 
 }
-
-/* .linkCategorias:hover{
-    cursor: pointer;
-}
-
-/* .contenedorCategorias {
-    background-color: var(--secondary-color);
-    color: var(--tertiary-color);
-}  */
 
 .options {
   display: flex;
@@ -159,9 +164,6 @@ footer a:hover {
   align-items: center;
 }
 
-.paginas {
-  background-color: #141515;
-}
   /* width: 250px; */
 
 
