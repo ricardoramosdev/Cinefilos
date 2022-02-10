@@ -15,9 +15,9 @@ function categorias() {
         if(el.publicado){ //agrego esta condicion para que solo muestre las peliculas que el administrador tiene marcadas como publicadas
         if (el.categoria === "Drama") {
             Drama.innerHTML += `
-        <button class="btn my-4 " onclick="detallePelicula(${index})"  >
-            <div class="card paginas">              
-                    <img src="${el.imgPortada}" class="card-img-top imagenesCard" alt="...">
+        <button class="btn my-5 boton col justify-content-center d-flex" onclick="detallePelicula(${index})"  >
+            <div class="card paginas h-100 w-100">              
+                    <img src="${el.imgPortada}" class="card-img-top imagenesCard " alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${el.nombrePelicula}</h5> 
                         <h6 class="card-subtitle mb-2 text-muted">Mas populares</h6>                                                
@@ -27,9 +27,9 @@ function categorias() {
         `
         } else if (el.categoria === "Acción") {
             Accion.innerHTML += `
-        <button  class="btn my-4" onclick="detallePelicula(${index})" >
-            <div class="card paginas text-center ">            
-                        <img src="${el.imgPortada}" class="card-img-top imagenesCard" alt="...">
+        <button  class="btn my-5 boton col justify-content-center d-flex" onclick="detallePelicula(${index})" >
+            <div class="card paginas h-100 w-100 ">            
+                        <img src="${el.imgPortada}" class="card-img-top imagenesCard  " alt="...">
                         <div class="card-body">
                             <h5 class="card-title">${el.nombrePelicula}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Mas populares</h6>                          
@@ -39,8 +39,8 @@ function categorias() {
         `
         } else if (el.categoria === "Ciencia Ficción") {
             CiFi.innerHTML += `
-        <button class="btn my-4" onclick="detallePelicula(${index})" >
-            <div class="card paginas">
+        <button class="btn my-5 boton col justify-content-center d-flex" onclick="detallePelicula(${index})" >
+            <div class="card paginas h-100 w-100">
                         <img src="${el.imgPortada}" class="card-img-top imagenesCard" alt="...">
                         <div class="card-body">
                             <h5 class="card-title ">${el.nombrePelicula}</h5>    
@@ -51,8 +51,8 @@ function categorias() {
         `
         } else if (el.categoria === "Comedia") {
             Comedia.innerHTML += `
-        <button class="btn my-4"  onclick="detallePelicula(${index})" >
-            <div class="card paginas">
+        <button class="btn my-5 boton col justify-content-center d-flex"  onclick="detallePelicula(${index})" >
+            <div class="card paginas h-100 w-100">
                         <img src="${el.imgPortada}" class="card-img-top imagenesCard" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">${el.nombrePelicula}</h5>             
