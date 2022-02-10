@@ -29,7 +29,7 @@ main {
 }
 
 .featured {
-  z-index:0 ;
+  z-index: 0;
   border: none;
   color: var(--tertiary-color);
   position: relative;
@@ -63,41 +63,42 @@ main {
   height: 20rem;
 }
 
-/* Cambie el nombre card-body por modalCard para no pisar estilos de bootstrap */
 
-.categorias {
-  display: flex;
-  justify-content: space-around;
-}
+/* CARDS */
 
-/* .imgCard{
-    width: 250px;
-    height: 330px;
-} */
+
+
+
 .nombresCategorias {
   color: var(--secondary-color);
   background-color: var(--primary-color);
-  height: min-content;
 }
+
+.paginas {
+
+background-color: #141515;
+max-width: 400px; 
+
+}
+/* .boton{
+  height: 100%;
+  width: 24%;
+  justify-content: end;
+  align-items: center;
+  justify-content:space-evenly;
+} */
+
+/* CIERRE CARDS */
+
 .mainClass {
   background-color: black;
-  
-  
+  justify-content:space-evenly;
 }
-/* .linkCategorias:hover{
-    cursor: pointer;
-}
-
-
- 
-/* .contenedorCategorias {
-    background-color: var(--secondary-color);
-    color: var(--tertiary-color);
-}  */
 
 .options {
   display: flex;
 }
+
 .options .btn {
   display: flex;
   height: 2rem;
@@ -106,6 +107,7 @@ main {
   justify-content: center;
   padding: 0;
 }
+
 .btn-feature {
   color: gold;
   font-weight: 400;
@@ -123,16 +125,19 @@ main {
   font-size: 1rem;
   border-radius: 0.25rem;
 }
+
 /* footer */
 footer {
   position: relative;
   bottom: 0px;
   width: 100%;
 }
+
 footer a {
   text-decoration: none;
   color: var(--tertiary-color);
 }
+
 footer a:hover {
   color: var(--primary-color);
 }
@@ -144,6 +149,7 @@ footer a:hover {
   border-radius: 2rem;
   overflow: hidden;
 }
+
 .contenido-register {
   display: flex;
   background-color: var(--secondary-color);
@@ -154,17 +160,58 @@ footer a:hover {
   border-radius: 1rem;
   background-color: var(--primary-color);
 }
+
 .centrado {
   justify-content: center;
   align-items: center;
 }
 
-.paginas {
-  background-color: #141515;
-}
-  /* width: 250px; */
+
 
 
 .paginas:hover {
   transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+.desciption {
+  width: 100%;
+  float: left;
+  padding: 25px;
+  overflow: hidden;
+}
+
+
+.poster {
+  float: left;
+  width: 140px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.recomendations {
+  width: 300px;
+  height: 100%;
+  float: left;
+  padding left: 30px;
+
+}
+
+.recom-item {
+  position: relative;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 40%
+}
+
+.data {
+  padding: 30px;
+  margin: 40px;
+
 }

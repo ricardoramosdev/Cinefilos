@@ -150,12 +150,13 @@ localStorage.setItem("movies", JSON.stringify(movies));
 // import {feature} from "/js/admin" ;
 
 console.log(JSON.parse(localStorage.getItem("featured")))
-
+console.log("sai:", movies);
 if(JSON.parse(localStorage.getItem("featured"))==null){
     let featured = movies[0];
     featured["featured"] = true;
     console.log(featured.featured);
     movies.splice(0, 1, featured);
+    
     localStorage.setItem("movies", JSON.stringify(movies));
     localStorage.setItem("featured", JSON.stringify(featured));
     

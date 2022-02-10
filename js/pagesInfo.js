@@ -1,18 +1,19 @@
-movies = JSON.parse(localStorage.getItem("movies")) || [];
-const infoPelicula = document.querySelector("#info")
+// movies = JSON.parse(localStorage.getItem("movies")) || [];
 
+var infoPelicula = document.querySelector("#info")
 
-function detallePelicula(index){
-let info = movies[index];
-localStorage.setItem("info", JSON.stringify(info));
- 
-    console.log("aca:", index);
-// alert("hola")
-infoPelicula.innerHTML= `<p>conchudo putoooo</p>
-<h5 class="card-title">${index.nombrePelicula}</h5> 
-  
+let detalle = JSON.parse(localStorage.getItem("detalle"))
+
+console.log("acaa:",detalle);
+
+infoPelicula.innerHTML = `
+
+<div class="card text-center h-100 w-50">            
+        <img src="${detalle.imgPortada}" class="card-img-top imgCard" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${detalle.nombrePelicula}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${detalle.descripcion}</h6>                          
+        </div>
+</div>
+
 `
-window.location = "/pages/pagesinfo.html"
-//  infoPelicula.innerHTML += `
-// <p>holaa</p>`
-};
