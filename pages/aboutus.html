@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <header class="position-sticky top-0">
-        <nav class="navbar navbar-expand-md navbar-light ">
+    <header class="sticky-top">
+        <nav id="navbar" class="navbar  navbar-expand-md navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">CINEFILOS</a>
-                
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -30,13 +30,13 @@
                             <a class="nav-link" href="/pages/admin.html">Panel Admin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="/pages/error404.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de nosotros</a>
+                            <a class="nav-link" href="/pages/aboutus.html">Acerca de nosotros</a>
                         </li>
                         <li class="nav-item " id="login">
                             <a class="nav-link" type="button" data-bs-toggle="modal"
@@ -50,9 +50,9 @@
             </div>
         </nav>
 
-       
+
     </header>
-    <main>
+    <main class="mainClass">
         <!-- Modal -->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
             aria-hidden="true">
@@ -76,7 +76,7 @@
                                 required autofocus="">
                             <label for="inputPassword" class="sr-only">Contraseña</label>
                             <input type="password" id="loginPassword" name="password" class="form-control"
-                                placeholder="Contraseña" required>
+                                placeholder="Contraseña" minlength="6" required>
                             <div id="loginError" class="text-danger"></div>
                             <div class="my-2">
 
@@ -101,7 +101,7 @@
             </div>
         </div>
         <!-- Fin Modal -->
-        <section class="slider">
+        <section class="slider text-muted">
             <div class="colorfondos">
               <h1 class="display-2 text-center  p-4">Acerca de Nosotros</h1>
               <h4 class="text-center  fst-italic pb-3 px-1">
@@ -113,26 +113,28 @@
               </h4>
 
     
-            <article class="row container-fluid">
-              <div class="col-sm-12 col-md-4">
-                <img class="opacity img img-fluid rounded-circle" src="/assets/img/capitan america.jpg" alt="Ricardo">
+            <article class="row container-fluid ">
+              <div class="col-sm-12 col-md-4 ">
+                <img class="opacity img img-fluid rounded-circle 50%" src="/assets/img/capitan america1.png" alt="Ricardo">
                 <h4 class="text-center colorIndex">Ricardo Ramos</h4>
                 <p class="fs-5">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit earum similique veniam commodi ipsum, numquam odit explicabo modi praesentium aspernatur ut sit, esse optio provident molestiae minus odio id unde?
                 </p>
               </div>
-              <div class="col-sm-12 col-md-4">
-                <img class="opacity img img-fluid rounded-circle" src="/assets/img/Superman.jpg" alt="Gero">
+              <div class="col-sm-12 col-md-4 ">
+                <img class="opacity img img-fluid rounded-circle 50% " src="/assets/img/Superman1.jpg" 
+                alt="Gero">
                 <h4 class="text-center colorIndex">Geronimo Garzon</h4>
                 <p class="fs-5">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo facere fugit quod voluptatibus saepe beatae corporis ipsa porro molestias expedita dignissimos architecto earum mollitia corrupti laudantium, ducimus inventore? Sapiente, sunt?
                 </p>
               </div>
               <div class="col-sm-12 col-md-4">
-                <img class="opacity img img-fluid rounded-circle" src="/assets/img/venom-6.jpg" alt="Benja">
-                <h4 class="text-center colorIndex">Benjamin Japaze</h4>
+                <img class="opacity img img-fluid rounded-circle 50% " src="/assets/img/venom11.jpg"
+                alt="Benja">
+                <h4 class="text-center colorIndex mt-4">Benjamin Japaze</h4>
                 <p class="fs-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nisi veritatis laudantium iure explicabo possimus maxime aliquam maiores, ea nihil at architecto obcaecati distinctio quia totam facilis deleniti minus nesciunt?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo facere fugit quod voluptatibus saepe beatae corporis ipsa porro molestias expedita dignissimos architecto earum mollitia corrupti laudantium, ducimus inventore? Sapiente, sunt?
                 </p>
               </div>
             </article>
@@ -143,7 +145,7 @@
 
 
 
-<footer class="bg-dark text-light">
+<footer class="bg-dark text-light mt-3">
     <div class="row g-0 align-items-center py-4">
         <div id="sections " class="col"></div>
         <div id="reserved " class="col">Todos los derechos reservados &copy;</div>
