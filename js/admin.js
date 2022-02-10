@@ -87,6 +87,11 @@ function newMovie(event) {
     console.log(newMovie);
     movies.push(newMovie);
     localStorage.setItem("movies", JSON.stringify(movies));
+    Swal.fire(
+        'Agregado!',
+        'Agregado con exito.',
+        'success'
+    )
     productList();
 
 }
