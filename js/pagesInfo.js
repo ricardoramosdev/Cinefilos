@@ -1,19 +1,32 @@
 // movies = JSON.parse(localStorage.getItem("movies")) || [];
 
-var infoPelicula = document.querySelector("#info")
+var infoPelicula = document.querySelector("#reemplazarCard")
 
 let detalle = JSON.parse(localStorage.getItem("detalle"))
 
-console.log("acaa:",detalle);
+
 
 infoPelicula.innerHTML = `
 
-<div class="card text-center h-100 w-50">            
-        <img src="${detalle.imgPortada}" class="card-img-top imgCard" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">${detalle.nombrePelicula}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${detalle.descripcion}</h6>                          
-        </div>
-</div>
+<div class="col-3">
+<img src="${detalle.imgPortada}" class="  imgCard" alt="...">
 
+</div>
+ 
+<div class="col-9"> 
+<h1>${detalle.nombrePelicula}</h1>
+                 <br>
+                 <p>
+                     Ver 
+                     <strong>${detalle.nombrePelicula}</strong>
+                   <p> ${detalle.descripcion}</p>
+                      </p>
+                      <div class="extra">
+                           <span class="date" itemprop="dateCreated">Sep. 30, 2021</span>
+                           <span class="country">China</span>
+                           <span itemprop="duration" class="runtime">90 Min.</span>
+                           <span itemprop="contentRating" class="CPG-13 rated">PG-13</span> 
+                        </div> 
+                       
+</div> 
 `

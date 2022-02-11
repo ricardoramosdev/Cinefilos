@@ -77,7 +77,7 @@ main {
 .paginas {
 
 background-color: #141515;
-max-width: 400px; 
+max-width: 250px; 
 
 }
 /* .boton{
@@ -211,14 +211,7 @@ a {
   margin: 40px;
 
 }
-article>div{
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10rem ;
-}
+
 .max-w{
   
   height: 200px;
@@ -238,4 +231,20 @@ article>div{
   overflow: hidden;
   object-fit: cover;
   object-position: center;
+}
+
+.estrenos:hover{
+  background-color:rgba(00, 00, 00, 0.4);
+
+}
+.estrenos{
+  padding: 1rem;
+
+}
+.estrenos img{
+  width: 100%;
+}
+
+.background-description{
+  background-color: rgba(00, 00, 00, 0.4);
 }
