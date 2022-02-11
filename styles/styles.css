@@ -178,25 +178,21 @@ a {
   color: var(--tertiary-color);
 }
 
-.desciption {
-  width: 100%;
-  float: left;
-  padding: 25px;
-  overflow: hidden;
-}
+/* description */
+
+
 
 
 .poster {
   float: left;
-  width: 140px;
   position: relative;
   box-sizing: border-box;
-}
+} 
 
 .recomendations {
   width: 300px;
   height: 100%;
-  float: left;
+  
   padding-left: 30px;
 
 }
