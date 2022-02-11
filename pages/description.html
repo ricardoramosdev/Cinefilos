@@ -10,11 +10,11 @@
     <script src="https://kit.fontawesome.com/62ca135f44.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="position-sticky top-0">
-        <nav class="navbar navbar-expand-md navbar-light ">
+    <header class="sticky-top">
+        <nav id="navbar" class="navbar  navbar-expand-md navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">CINEFILOS</a>
-                
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -26,13 +26,13 @@
                             <a class="nav-link" href="/pages/admin.html">Panel Admin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="/pages/error404.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de nosotros</a>
+                            <a class="nav-link" href="/pages/aboutus.html">Acerca de nosotros</a>
                         </li>
                         <li class="nav-item " id="login">
                             <a class="nav-link" type="button" data-bs-toggle="modal"
@@ -46,29 +46,58 @@
             </div>
         </nav>
 
-       
+
     </header>
-    <main class=" main d-flex  flex-row" >
-        <!-- <div class="description d-flex flex-row" >
-            <div class="poster">
-                <img src="/assets/img/venom-6.jpg" class="img-fluid" alt="poster">
+    <main class="mainClass">
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                        <button type="button" class="close btn-danger" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center" cz-shortcut-listen="true">
+
+                        <form class="form-signin" id="userLoginForm" onsubmit="userLogin(event)">
+                            <img class=""
+                                src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6khvCFpB5PnRrNwXs1M3EMoAJtliQsg...Nq9vo9"
+                                alt="" width="100">
+                            <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+                            <label for="inputEmail" class="sr-only">Email</label>
+                            <input type="email" id="loginEmail" name="email" class="form-control" placeholder="Email"
+                                required autofocus="">
+                            <label for="inputPassword" class="sr-only">Contraseña</label>
+                            <input type="password" id="loginPassword" name="password" class="form-control"
+                                placeholder="Contraseña" minlength="6" required>
+                            <div id="loginError" class="text-danger"></div>
+                            <div class="my-2">
+
+                                <a href="#" class="text-danger text-decoration-underline">Olvidé mi contraseña</a>
+                            </div>
+                            <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
+                            <p class="mt-2 mb-3 text-muted">© 2022</p>
+                        </form>
+                        <hr>
+                        <div class="mb-3">
+
+                            <a href="/pages/register.html" class="text-danger ">Registrar un usuario nuevo</a>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
             </div>
-            <div class="data">
-                <div class="resume">
-                    <h1>Venom 2: Habra Matanza</h1>
-                    <br>
-                    <p>
-                        "ver"
-                        <strong> Venom 2: Habra Matanza</strong>
-                        "Después de encontrar un cuerpo anfitrión en el periodista de investigación Eddie Brock, el simbionte alienígena debe enfrentarse a un nuevo enemigo, Carnage, el alter ego del asesino en serie Cletus Kasady."
-                    </p>
-                </div>
-                <div class="extra"> 
-                    <span class="country"> USA </span>
-                    <span itemprop="duration" class="runtime"> 90 min</span>
-                </div>
-       </div> -->
-       <div class="sheader d-flex flex-row"> 
+        </div>
+        <!-- Fin Modal -->
+    <main class=" main d-flex  flex-row" > 
            <div class="poster m-2"> 
                <img itemprop="image" src="/assets/img/capitan america.jpg" alt="Venom 2: Habrá Matanza"> 
                <br>
@@ -84,7 +113,7 @@
                 
                
             </div> 
-            <div class="data m-4 ">
+            <div class="data m-4  text-white">
                  <h1>Avengers: Endgame</h1>
                  <br>
                  <p>
@@ -111,19 +140,19 @@
                         </div>
                           </div>
 
-       <div class="sidebar right scrolling mt-3">
+       <div class="sidebar right scrolling mt-3 d-none d-lg-block">
            <aside>
                <div>
              <article>
                        <div class="image">
                            <img src="https://image.tmdb.org/t/p/w300/6Y014ckpxww11CGAIRL8uT4Pz5n.jpg" alt="Jefe Papi 2: La quiebra">
-                           <div class="data">
+                           <div class="side">
                                <h3>Jefe Papi 2: La quiebra</h3>
                             </div>
                 </article>
                 <article class="w_item_a" id="post-14263">
                         <div class="image"><img src="https://image.tmdb.org/t/p/w300/nj84vpuUWdbmYktBzjiWn5Ny1ZF.jpg" alt="El escándalo">
-                            <div class="data">
+                            <div class="side">
                                 <h3>El escándalo</h3>
                                </div>
                             </div>
@@ -131,7 +160,7 @@
                     <article class="w_item_a" id="post-12522">
                                 <div class="image">
                                     <img src="https://image.tmdb.org/t/p/w300/sd4xN5xi8tKRPrJOWwNiZEile7f.jpg" alt="Cars">
-                                    <div class="data">
+                                    <div class="side">
                                         <h3>Cars</h3>    
                                     </div>
                                 </div>
