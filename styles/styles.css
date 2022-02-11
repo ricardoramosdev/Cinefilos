@@ -234,3 +234,8 @@ article>div{
   align-content: flex-end;
   
 }
+.errorImg{
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
