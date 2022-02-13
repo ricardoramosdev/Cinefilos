@@ -79,6 +79,7 @@ main {
 background-color: #141515;
 max-width: 250px; 
 color:var(--tertiary-color);
+aspect-ratio: 1/1;
 }
 
 
