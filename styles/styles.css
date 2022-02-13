@@ -110,6 +110,9 @@ color:var(--tertiary-color);
 }
 
 .btn-feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: gold;
   font-weight: 400;
   line-height: 1.5;
