@@ -84,8 +84,8 @@ overflow: hidden;
 }
 .imagenesCard{
   /* aspect-ratio: 2/3 !important;
-  display: flex;
-  object-fit:fill; */
+  display: flex;*/
+  object-fit:cover; 
   width: 100%;
 } 
 
