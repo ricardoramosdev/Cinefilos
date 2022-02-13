@@ -14,10 +14,11 @@
 </head>
 
 <body>
-    <header class="position-sticky top-0">
-        <nav id="navbar"class="navbar navbar-expand-md navbar-light ">
+    <header class="sticky-top">
+        <nav id="navbar" class="navbar  navbar-expand-md navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">CINEFILOS</a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -29,13 +30,13 @@
                             <a class="nav-link" href="/pages/admin.html">Panel Admin</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="/pages/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de nosotros</a>
+                            <a class="nav-link" href="/pages/aboutus.html">Acerca de nosotros</a>
                         </li>
                         <li class="nav-item " id="login">
                             <a class="nav-link" type="button" data-bs-toggle="modal"
@@ -51,7 +52,7 @@
 
 
     </header>
-    <main>
+    <main class="mainClass">
         <!-- Modal -->
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle"
             aria-hidden="true">
@@ -75,7 +76,7 @@
                                 required autofocus="">
                             <label for="inputPassword" class="sr-only">Contraseña</label>
                             <input type="password" id="loginPassword" name="password" class="form-control"
-                                placeholder="Contraseña" required>
+                                placeholder="Contraseña" minlength="6" required>
                             <div id="loginError" class="text-danger"></div>
                             <div class="my-2">
 
@@ -254,12 +255,12 @@
     </main>
     <footer class="bg-dark text-light">
         <div class="row g-0 align-items-center py-4">
-            <div id="sections " class="col"></div>
-            <div id="reserved " class="col">Todos los derechos reservados &copy;</div>
-            <div class=" col" id="redes">
-                <a href=""><i class="fab fa-facebook-square mx-2"></i></a>
-                <a href=""><i class="fa fa-instagram mx-2" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-twitter mx-2" aria-hidden="true"></i></a>
+            <div id="sections " class="col "></div>
+            <div id="reserved " class="col ">Todos los derechos reservados &copy;</div>
+            <div class=" col " id="redes">
+                <a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook-square mx-2"></i></a>
+                <a href="https://www.instagram.com/" target="blank"><i class="fa fa-instagram mx-2" aria-hidden="true"></i></a>
+                <a href="https://www.twitter.com/" target="blank"><i class="fa fa-twitter mx-2" aria-hidden="true"></i></a>
             </div>
         </div>
     </footer>

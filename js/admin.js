@@ -16,7 +16,7 @@ function productList() {
                     <th scope='row' ><div style="width:4rem;overflow:hidden;text-overflow: ellipsis;" >${element.codigo}</div></th>
                     <td>${element.nombrePelicula}</td>
                     <td>${element.categoria}</td>
-                    <td class="d-none d-md-flex">${element.descripcion}</td>
+                    <td class="d-none d-md-table-cell">${element.descripcion}</td>
                     <td>${element.publicado==true ? "Si" : "-"}</td>
                     <td>
                     <div class="options d-flex flex-wrap">
@@ -56,7 +56,7 @@ function deleteProduct(index) {
     })
 
 };
-
+let featureIndex = "";
 function feature(index) {
     movies.map(el => delete el.featured);
     console.log(movies[index])
@@ -68,6 +68,7 @@ function feature(index) {
     localStorage.setItem("featured", JSON.stringify(featured));
     movies = JSON.parse(localStorage.getItem("movies"));
     productList();
+   localStorage.setItem("featureIndex", index )
 }
 
 function newMovie(event) {
