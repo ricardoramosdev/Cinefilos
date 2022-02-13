@@ -16,7 +16,7 @@ function categorias() {
         if (el.categoria === "Drama") {
             Drama.innerHTML += `
         <button class="btn my-1 boton col-4 p-1 col-md-3 justify-content-center d-flex" onclick="detallePelicula(${index})"  >
-            <div class="card paginas h-100 w-100 ">              
+            <div class="card paginas w-100 ">              
                     <img src="${el.imgPortada}" class=" imagenesCard " alt="...">
                                  
             </div>     

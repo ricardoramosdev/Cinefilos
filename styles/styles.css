@@ -82,7 +82,10 @@ color:var(--tertiary-color);
 aspect-ratio: 2/3 !important;
 overflow: hidden;
 }
-
+.imagenesCard{
+  display: flex;
+  object-fit: cover;
+}
 
 /* CIERRE CARDS */
 
