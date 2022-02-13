@@ -83,9 +83,10 @@ aspect-ratio: 2/3 !important;
 overflow: hidden;
 }
 .imagenesCard{
-  aspect-ratio: 2/3 !important;
+  /* aspect-ratio: 2/3 !important;
   display: flex;
-  object-fit:fill;
+  object-fit:fill; */
+  width: 100%;
 } 
 
 /* CIERRE CARDS */
