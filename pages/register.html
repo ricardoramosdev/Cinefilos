@@ -75,10 +75,10 @@
                                 <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
                                 <label for="inputEmail" class="sr-only">Email</label>
                                 <input type="email" id="loginEmail" name="email" class="form-control" placeholder="Email"
-                                    required autofocus="">
+                                    required autofocus="" maxlength="50">
                                 <label for="inputPassword" class="sr-only">Contraseña</label>
                                 <input type="password" id="loginPassword" name="password" class="form-control"
-                                    placeholder="Contraseña" required>
+                                    placeholder="Contraseña" required maxlength="50">
                                 <div id="loginError" class="text-danger"></div>
                                 <div class="my-2">
                                     <a href="#" class="text-danger text-decoration-underline">Olvidé mi contraseña</a>
@@ -110,12 +110,12 @@
                                     <div class="form-group">
                                         <label for="nameInput">Nombre Completo</label>
                                         <input type="text" name="name" class="form-control" id="nameInput"
-                                            placeholder="Cine Filos" required>
+                                            placeholder="Cine Filos" required maxlength="50">
                                     </div>
                                     <div class="form-group">
                                         <label for="emailInput">Email</label>
                                         <input type="email" name="email" class="form-control" id="emailInput"
-                                            aria-describedby="emailHelp" placeholder="example@example.ex" required>
+                                            aria-describedby="emailHelp" placeholder="example@example.ex" required maxlength="50">
                                         <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tus
                                             datos.</small>
                                         <div id="errorMessage" class="text-warning"></div>
@@ -125,7 +125,7 @@
                                         <input type="password" class="form-control" id="passwordInput" placeholder="Contraseña"
                                             minlength="8"
                                             title="Debe contener al menos un numero, una letra mayúscula, una letra minuscula y tener 8 o más caracteres."
-                                            name="password" required>
+                                            name="password" required maxlength="50">
                                     </div>
                                     <div class="form-check my-2">
                                         <input type="checkbox" class="form-check-input" name="isAdmin" id="isAdmin">

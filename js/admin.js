@@ -16,7 +16,7 @@ function productList() {
                     <th scope='row' ><div style="width:4rem;overflow:hidden;text-overflow: ellipsis;" >${element.codigo}</div></th>
                     <td>${element.nombrePelicula}</td>
                     <td>${element.categoria}</td>
-                    <td>${element.descripcion}</td>
+                    <td class="d-none d-md-flex">${element.descripcion}</td>
                     <td>${element.publicado==true ? "Si" : "-"}</td>
                     <td>
                     <div class="options d-flex flex-wrap">

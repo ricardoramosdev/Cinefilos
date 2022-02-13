@@ -183,7 +183,7 @@
                             <div class="row">
                                 <div class="mb-3 col">
                                   <label class="form-label" for="name">Nombre</label>
-                                  <input type="text" class="form-control" id="nameEdit" name="name" placeholder="Nombre de Pelicula" required>
+                                  <input type="text" class="form-control" id="nameEdit" name="name" placeholder="Nombre de Pelicula" required maxlength="20">
                                 </div>
                                 <div class="mb-3 col">
                                     <label class="form-label" for="category">Categoría</label>
@@ -202,7 +202,7 @@
                             </div>
                             <div class="mb-3">
                               <label class="form-label" for="description">Descripción</label>
-                              <textarea class="form-control" id="descriptionEdit" name="description" required>Ingrese breve descripción. Ésta se mostrará al usuario</textarea>
+                              <textarea class="form-control" id="descriptionEdit" name="description" required maxlength="300">Ingrese breve descripción. Ésta se mostrará al usuario</textarea>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="imgPortada">Imagen de portada</label>
@@ -236,7 +236,7 @@
                         <th scope="col" style="width: 20px;">Id</th>
                         <th scope="col">Name</th>
                         <th scope="col">Genre</th>
-                        <th scope="col">Story</th>
+                        <th class="d-none d-md-flex" scope="col">Story</th>
                         <th scope="col">Active</th>
                         <th scope="col">Edit</th>
                     </tr>
