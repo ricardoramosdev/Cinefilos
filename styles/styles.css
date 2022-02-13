@@ -263,3 +263,7 @@ article div{
   justify-content: center;
   align-items: center;
 }
+
+.card-img-top{
+  width: 220px;
+}
