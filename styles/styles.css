@@ -79,7 +79,7 @@ main {
 background-color: #141515;
 max-width: 250px; 
 color:var(--tertiary-color);
-aspect-ratio: 1/1.5;
+aspect-ratio: 2/3 !important;
 overflow: hidden;
 }
 
