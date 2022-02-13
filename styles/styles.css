@@ -78,7 +78,7 @@ main {
 
 background-color: #141515;
 max-width: 250px; 
-
+color:var(--tertiary-color);
 }
 /* .boton{
   height: 100%;
