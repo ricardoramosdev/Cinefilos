@@ -13,7 +13,7 @@ function productList() {
 
             movieList.innerHTML += `
         <tr>
-                    <th scope='row' ><div style="width:3rem;overflow:hidden;text-overflow: ellipsis;" >${element.codigo}</div></th>
+                    <th scope='row' ><div style="width:2rem;overflow:hidden;text-overflow: ellipsis;" >${element.codigo}</div></th>
                     <td>${element.nombrePelicula}</td>
                     <td>${element.categoria}</td>
                     <td class="d-none d-md-table-cell">${element.descripcion}</td>
