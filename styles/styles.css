@@ -91,7 +91,7 @@ color:var(--tertiary-color);
 /* CIERRE CARDS */
 
 .mainClass {
-  background-color: black;
+  background-color: rgb(39, 39, 39);
   justify-content:space-evenly;
 }
 
@@ -106,6 +106,7 @@ color:var(--tertiary-color);
   align-items: center;
   justify-content: center;
   padding: 0;
+  color: #f5f5f1;
 }
 
 .btn-feature {

@@ -13,18 +13,18 @@ function productList() {
 
             movieList.innerHTML += `
         <tr>
-                    <th scope='row' ><div style="width:4rem;overflow:hidden;text-overflow: ellipsis;" >${element.codigo}</div></th>
+                    <th scope='row' ><div style="width:3rem;overflow:hidden;text-overflow: ellipsis;" >${element.codigo}</div></th>
                     <td>${element.nombrePelicula}</td>
                     <td>${element.categoria}</td>
                     <td class="d-none d-md-table-cell">${element.descripcion}</td>
                     <td>${element.publicado==true ? "Si" : "-"}</td>
                     <td>
-                    <div class="options d-flex flex-wrap">
-                        <button class="btn " data-toggle="tooltip" data-placement="left" title="Eliminar" onclick="deleteProduct(${index})"><i class="fas fa-trash"></i></button>
-                        <button class="btn " id="editMovie" data-toggle="tooltip" data-placement="left" title="Editar"  data-bs-toggle="modal"
+                    <div class="options d-flex flex-wrap ">
+                        <button class="btn text-light" data-toggle="tooltip" data-placement="left" title="Eliminar" onclick="deleteProduct(${index})"><i class="fas fa-trash"></i></button>
+                        <button class="btn text-light " id="editMovie" data-toggle="tooltip" data-placement="left" title="Editar"  data-bs-toggle="modal"
                         data-bs-target="#editMovie" onclick="editMovie(${index})"><i class="fas fa-edit"></i></button>
                         
-                        <button class=${element.featured==true ? "btn-feature":"btn "} id="btn-feature" data-toggle="tooltip" data-placement="left" title="Destacar. Este titulo aparecera en la cabecera de la pantalla principal" onclick="feature(${index})"><i class="fas fa-star"></i></button>
+                        <button class=${element.featured==true ? "btn-feature":"btn "} id="btn-feature" data-toggle="tooltip" data-placement="left" title="Destacar. Este titulo aparecera en la cabecera de la pantalla principal" onclick="feature(${index})"><i class="fas fa-star "></i></button>
                     </div>
                     
         </tr>`
