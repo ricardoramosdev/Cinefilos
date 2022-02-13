@@ -85,7 +85,7 @@ overflow: hidden;
 .imagenesCard{
   aspect-ratio: 2/3 !important;
   display: flex;
-  object-fit:cover;
+  object-fit:fill;
 } 
 
 /* CIERRE CARDS */
