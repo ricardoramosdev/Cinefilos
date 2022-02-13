@@ -80,13 +80,7 @@ background-color: #141515;
 max-width: 250px; 
 color:var(--tertiary-color);
 }
-/* .boton{
-  height: 100%;
-  width: 24%;
-  justify-content: end;
-  align-items: center;
-  justify-content:space-evenly;
-} */
+
 
 /* CIERRE CARDS */
 
@@ -177,7 +171,7 @@ footer a:hover {
 
 
 .paginas:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 a {
