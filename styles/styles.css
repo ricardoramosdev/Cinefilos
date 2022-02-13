@@ -213,7 +213,7 @@ a {
 }
 
 .max-w{
-  
+ 
   height: 200px;
   width: 200px;
   
@@ -246,5 +246,20 @@ a {
 }
 
 .background-description{
-  background-color: rgba(00, 00, 00, 0.4);
+  background-color: rgba(00, 00, 00, 0.6);
+  width: 100%;
+  color:var(--tertiary-color)
+}
+.imgCard{
+  width: 100%;
+}
+article ul{
+  list-style: none;
+  text-align: center;
+}
+article div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

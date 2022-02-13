@@ -4,16 +4,20 @@ var infoPelicula = document.querySelector("#reemplazarCard")
 
 let detalle = JSON.parse(localStorage.getItem("detalle"))
 
-
+let background = document.getElementById("background");
+background.setAttribute("style",`background-image: url("${detalle.imgFeatured}");
+background-size: cover;
+background-position: center;
+`)
 
 infoPelicula.innerHTML = `
 
-<div class="col-3">
+<div class="col-4">
 <img src="${detalle.imgPortada}" class="  imgCard" alt="...">
 
 </div>
  
-<div class="col-9"> 
+<div class="col-8 text-light"> 
 <h1>${detalle.nombrePelicula}</h1>
                  <br>
                  <p>
