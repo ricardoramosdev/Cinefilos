@@ -172,4 +172,4 @@ featuredMovieImg.src = featuredMovie.imgFeatured;
 let featuredMovieDescription = document.getElementById("featuredMovieDescription");
 featuredMovieDescription.innerHTML = featuredMovie.descripcion;
 let featuredMovieBtn = document.getElementById("featuredMovieBtn");
-let featureIndex = localStorage.getItem("featureIndex");
+let featureIndex = localStorage.getItem("featureIndex") || [0];
